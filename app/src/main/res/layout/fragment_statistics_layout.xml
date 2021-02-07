@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/tool_bar"
+        android:paddingTop="25dp">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:singleLine="true"
+            android:text="报表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_title_first"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/statistics_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/statistics_layout_img"
+            android:layout_width="40dp"
+            android:layout_height="47dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/main_statis" />
+
+        <TextView
+            android:id="@+id/statistics_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/statistics_layout_img"
+            android:paddingBottom="12dp"
+            android:text="维保统计报表"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/message_layout_msg_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/statistics_layout_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/corner_shape"
+            android:gravity="center"
+            android:text="99"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignLeft="@+id/statistics_layout_text"
+            android:layout_alignBottom="@+id/statistics_layout_img"
+            android:background="@color/global_line_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statistics_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/statistics_layout_img1"
+            android:layout_width="40dp"
+            android:layout_height="47dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/fire_statis" />
+
+        <TextView
+            android:id="@+id/statistics_layout_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/statistics_layout_img1"
+            android:paddingBottom="12dp"
+            android:text="巡检统计报表"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/message_layout_msg_count1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/statistics_layout_text1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/corner_shape"
+            android:gravity="center"
+            android:text="99"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignLeft="@+id/statistics_layout_text1"
+            android:layout_alignBottom="@+id/statistics_layout_img1"
+            android:background="@color/global_line_color" />
+
+    </RelativeLayout>
+
+</LinearLayout>

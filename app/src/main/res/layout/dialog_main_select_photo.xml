@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/photodialog_btn_take"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_border_takephoto"
+        android:gravity="center"
+        android:text="查看"
+        android:textColor="#323232" />
+
+    <View
+        android:id="@+id/file_download_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:background="@color/global_line_color"
+        android:gravity="center" />
+
+    <!--<android.support.v7.widget.AppCompatButton
+        android:id="@+id/photodialog_btn_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="#323232" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:background="@color/global_line_color"
+        android:gravity="center" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/photodialog_btn_native"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="#323232" />-->
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="center"
+        android:background="@color/global_line_color"
+        android:gravity="center" />-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/photodialog_btn_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_border_nativephoto"
+        android:gravity="center"
+        android:text="导出PDF"
+        android:textColor="#323232" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/photodialog_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_border"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#323232" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

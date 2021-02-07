@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="50dp"
+    android:paddingTop="6dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:visibility="invisible"
+        android:src="@drawable/extension" />
+
+    <ImageView
+        android:id="@+id/item_state_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/inspect_state_zero" />
+
+    <TextView
+        android:id="@+id/item_child_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="left|top"
+        android:text="消防给水系统"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+</LinearLayout>

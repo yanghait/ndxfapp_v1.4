@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_index"
+        icon="@mipmap/ic_index"
+        title="首页" />
+    <tab
+        id="@+id/tab_count"
+        icon="@mipmap/ic_count"
+        title="统计" />
+    <tab
+        id="@+id/tab_message"
+        icon="@mipmap/ic_messge"
+        title="消息" />
+    <tab
+        id="@+id/tab_person"
+        icon="@mipmap/ic_person"
+        title="个人" />
+</tabs>

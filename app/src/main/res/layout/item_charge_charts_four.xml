@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="维保工单"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableLeft="@mipmap/charge_charts_rect"/>
+
+    <TextView
+        android:id="@+id/button_one"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="近一周"
+        android:textSize="@dimen/_11sp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/item_charts_button_shape"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/rate_text1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/rate_text2"
+        app:layout_constraintTop_toBottomOf="@+id/button_one"
+        android:text="已完成"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/_11sp"
+        android:textColor="#30c78b"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/rate_text2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="未完成"
+        android:gravity="center"
+        android:textSize="@dimen/_11sp"
+        android:textColor="#ff9200"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_one"
+        android:layout_marginEnd="15dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charts_four_recycler"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate_text2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="20dp"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

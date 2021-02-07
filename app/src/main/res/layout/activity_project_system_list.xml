@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray1"
+    tools:context="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectSystemListActivity">
+
+    <!--<include  layout="@layout/toolbar"/>-->
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/tool_bar"
+        app:navigationIcon="@mipmap/back"
+        app:subtitleTextColor="#ffffff">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:singleLine="true"
+            android:text="系统列表"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="@dimen/txt_title_first" />
+
+        <TextView
+            android:id="@+id/historical_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:text="历史报警"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="12sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="10dp"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!--<com.ynzhxf.nd.firecontrolapp.ui.CustomGridView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:horizontalSpacing="5dp"
+        android:nestedScrollingEnabled="false"
+        android:numColumns="2"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </com.ynzhxf.nd.firecontrolapp.ui.CustomGridView>-->
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_sta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_sta_text_shape"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:text="事件记录统计排名前15"
+                android:textColor="#9c6eac"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:gravity="right|bottom"
+                android:paddingRight="2dp"
+                android:text="总数"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/layout_sta_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="26"
+                android:textStyle="bold"
+                android:textColor="@color/expandable_sum_text_color"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/layout_sta_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:id="@+id/child_two_num"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/item_child_two_num"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/child_two_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="left|top"
+            android:text="曲靖市-沾益县-沾益区卓越明郡-火灾自动报警系统-火灾自动报警系统-8幢屋顶风机"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="bottom"
+            android:text="事件数量"
+            android:paddingBottom="10dp"
+            android:textColor="@color/global_gray_text_color"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/child_two_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"
+            android:paddingBottom="7dp"
+            android:gravity="bottom"
+            android:text="26"
+            android:textStyle="bold"
+            android:textColor="#fc595a"
+            android:textSize="@dimen/_16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/expand_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="@color/global_line_color" />
+
+    <View
+        android:id="@+id/expand_two_space"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:visibility="gone"
+        android:background="@color/menu_normal_bac" />
+</LinearLayout>

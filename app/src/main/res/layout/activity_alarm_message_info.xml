@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ynzhxf.nd.xyfirecontrolapp.view.message.AlarmMessageInfoActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/position"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目名称"
+                android:textColor="#ec3108"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message_icon_type"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="事件类型"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="事件类型"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/global_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message_icon_point"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="报警位置"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_alarm_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="报警位置"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/global_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message__icon_alarm"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="报警值"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_alarm_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="报警值"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/global_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message_icon_time"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="报警时间"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="时间"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/global_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message_icon_prompt"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="提示消息"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_alarm_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="提示"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/global_line_color" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/message_icon_front"
+                android:drawablePadding="7dp"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="推送时间"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sp" />
+
+            <TextView
+                android:id="@+id/txt_push_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="3dp"
+                android:text="推送时间"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="@dimen/padding_left_right"
+                android:text="处理状态"
+                android:textSize="@dimen/txt_content_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_handel_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理状态"
+                android:textSize="@dimen/txt_content_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_state_con"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/menu_normal_bac"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <Button
+                android:id="@+id/btn_repaire"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_order_audit"
+                android:text="忽略"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_error_alarm"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_order_audit_right"
+                android:text="发起工单"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/gray_op"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_cancel"
+            android:text="维保"
+            android:textColor="@color/white" />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_sure"
+            android:text="误报"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

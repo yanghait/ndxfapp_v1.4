@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="testarr">
+        <item>项目测是1</item>
+        <item>项目测是2</item>
+        <item>项目测是3</item>
+        <item>项目测是4</item>
+        <item>项目测是5</item>
+        <item>项目测是6</item>
+        <item>项目测是7</item>
+    </string-array>
+
+    <string-array name="typename">
+        <item> </item>
+
+    </string-array>
+</resources>

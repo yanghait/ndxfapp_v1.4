@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ynzhxf.nd.xyfirecontrolapp.view.compentent.CompententSearchProjectActivity">
+    <include  layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/padding_top_bottom"
+        android:elevation="2dp">
+        <EditText
+            android:id="@+id/keyword"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:inputType="text"
+            android:hint="请输入项目名称"
+            android:textSize="@dimen/txt_content_normal"
+            android:padding="@dimen/padding_top_bottom"
+            android:drawableLeft="@drawable/search_new_icon"
+            android:drawablePadding="5dp"
+            android:background="@drawable/search_new"
+            android:textColor="@color/search_view_text_color"
+            />
+        <TextView
+            android:id="@+id/search_toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="@dimen/txt_content_small"
+            android:text=""
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_top_bottom"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pro_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

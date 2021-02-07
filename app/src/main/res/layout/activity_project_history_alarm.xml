@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectSystemListActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_top_bottom">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="3dp"
+                android:padding="@dimen/line_spacing">
+
+                <ImageView
+                    android:id="@+id/my_work_order_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/workorder_time" />
+
+                <TextView
+                    android:id="@+id/txt_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_img_seletor"
+                    android:drawablePadding="5dp"
+                    android:drawableEnd="@mipmap/down"
+                    android:layout_marginLeft="5dp"
+                    android:text="2018-11-11 11:11"
+                    android:textSize="@dimen/txt_content_normal"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="@dimen/txt_title_second"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txt_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_img_seletor"
+                    android:drawableEnd="@mipmap/down"
+                    android:drawablePadding="5dp"
+                    android:text="2018-11-11 11:11"
+                    android:textSize="@dimen/txt_content_normal"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记录总数:"
+                    android:textSize="@dimen/txt_content_small" />
+
+                <TextView
+                    android:id="@+id/txt_alarm_total_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/font_orange_color"
+                    android:textSize="@dimen/txt_content_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/global_line_color"/>
+
+    <include layout="@layout/all_no_data" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:srlDragRate="0.75"
+        app:srlEnableLoadMore="true"
+        app:srlEnablePureScrollMode="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/refreshLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

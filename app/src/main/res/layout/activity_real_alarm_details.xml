@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/menu_normal_bac">
+
+    <include layout = "@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="6dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@null"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/alarm_info_loc" />
+
+        <TextView
+            android:id="@+id/alarm_event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:gravity="left|top"
+            android:textSize="@dimen/_15sp"
+            android:text="点型感烟 顶层楼梯间9回路 130号历史趋势"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="当前值:"/>
+
+            <TextView
+                android:id="@+id/item_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/real_data_item_text_color"
+                android:text="1256.087v"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="报警值:"/>
+
+            <TextView
+                android:id="@+id/item_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:text="1256.087v"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="偏差率:"/>
+
+            <TextView
+                android:id="@+id/item_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:text="30%"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="标准值:"/>
+
+            <TextView
+                android:id="@+id/item_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:text="1256.087v~1423.56v"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="报警类型:"/>
+
+            <TextView
+                android:id="@+id/item_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/real_data_item_text_color"
+                android:text="故障事件"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="报警时间:"/>
+
+            <TextView
+                android:id="@+id/item_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:text="2012—12—12 12::32:50"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="36dp"
+            android:background="@color/global_line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/global_gray_text_color"
+                android:text="报警提示:"/>
+
+            <TextView
+                android:id="@+id/item_text7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/black"
+                android:text="消防栓系统管网压力过低"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

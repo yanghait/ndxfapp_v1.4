@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/white">
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_flow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        zhy:max_select="1">
+
+    </com.zhy.view.flowlayout.TagFlowLayout>
+
+</ScrollView>

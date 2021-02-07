@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/time"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/workorder_time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="营业时间:"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/inspect_setting_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@mipmap/down"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="5:30"
+            android:textColor="@color/flat_turquoise"
+            android:textSize="14sp" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@color/inspection_list_text" />
+
+        <TextView
+            android:id="@+id/inspect_setting_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@mipmap/down"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="22:30"
+            android:textColor="@color/flat_turquoise"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/inspection_man" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="巡检负责人(默认)"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@color/inspection_list_text"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/inspect_setting_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="李某某"
+            android:textColor="@color/inspection_list_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/front" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/inspect_set_icon" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_alignBottom="@+id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:gravity="center"
+            android:text="自动巡检任务"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/inspect_setting_switch"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignLeft="@+id/title"
+            android:layout_marginTop="5dp"
+            android:text="本模块开启后,系统将根据巡检配置自动生成巡检任务。"
+            android:textColor="@color/inspection_list_text"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/image_ass"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/assessment_set_icon" />
+
+        <TextView
+            android:id="@+id/title_ass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_ass"
+            android:layout_alignBottom="@+id/image_ass"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/image_ass"
+            android:gravity="center"
+            android:text="自动风险评估"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/inspect_setting_assessment"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_ass"
+            android:layout_alignLeft="@+id/title_ass"
+            android:layout_marginTop="5dp"
+            android:text="本模块开启后,系统将定时对项目进行风险评估。"
+            android:textColor="@color/inspection_list_text"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/inspect_setting_confirm"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_normal_shape"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp" />
+
+</LinearLayout>

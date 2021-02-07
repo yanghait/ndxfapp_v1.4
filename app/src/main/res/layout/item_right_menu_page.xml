@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/slide_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="@dimen/_15sp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:text="联网项目"/>
+
+    <View
+        android:id="@+id/slide_item_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp"
+        android:background="@color/global_line_color"/>
+
+</LinearLayout>

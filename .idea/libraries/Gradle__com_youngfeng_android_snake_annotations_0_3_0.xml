@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.youngfeng.android:snake-annotations:0.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.youngfeng.android/snake-annotations/0.3.0/3047e19cac01954b7de695e8a1beaf78a7da5307/snake-annotations-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.youngfeng.android/snake-annotations/0.3.0/8c0b876f608f66821f2ad68dcbaf9aea525d8403/snake-annotations-0.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.youngfeng.android/snake-annotations/0.3.0/8d52298e30db2eb86e7c14d0d1eb12da35f5379d/snake-annotations-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

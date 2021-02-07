@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_index"
+        icon="@drawable/my_index_sele"
+        title="首页" />
+    <!--<tab
+        icon="@mipmap/ic_count"
+        id="@+id/tab_count"
+        title="统计" />-->
+    <tab
+        id="@+id/tab_message"
+        icon="@drawable/my_message_sele"
+        title="消息" />
+    <tab
+        id="@+id/tab_person"
+        icon="@drawable/my_person_sele"
+        title="个人" />
+</tabs>

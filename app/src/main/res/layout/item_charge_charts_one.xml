@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/charts_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/charge_charts_network_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/charts_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/charge_charts_place_holder_count"
+        android:textColor="@color/inspect_message_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/charts_count1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="@string/charge_charts_network_project"
+        android:textColor="@color/inspect_message_color"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/charts_title1"
+        app:layout_constraintRight_toRightOf="@id/charts_title1"
+        app:layout_constraintTop_toBottomOf="@+id/charts_title1" />
+
+    <TextView
+        android:id="@+id/charts_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/charge_charts_network_error"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/charts_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <TextView
+        android:id="@+id/charts_count2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/charge_charts_place_holder_count"
+        android:textColor="@color/risk_assessment_state_color_yellow"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/charts_image"
+        app:layout_constraintTop_toBottomOf="@+id/charts_title2" />
+
+    <TextView
+        android:id="@+id/charts_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/charge_charts_network_success"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toRightOf="@+id/charts_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <TextView
+        android:id="@+id/charts_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/charge_charts_place_holder_count"
+        android:textColor="@color/inspect_message_color"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toRightOf="@+id/charts_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charts_title3" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="@color/menu_normal_bac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/tool_bar"
+        app:navigationIcon="@mipmap/back"
+        app:subtitleTextColor="#ffffff">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/backgroundcolor"
+            android:textSize="@dimen/txt_title_first" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/inspection_screen"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/inspection_home_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:drawableRight="@mipmap/inspection_screen"
+            android:drawablePadding="4dp"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/line_spacing">
+
+        <ImageView
+            android:id="@+id/my_work_order_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/workorder_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/my_work_order_img"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/inspection_home_left_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_img_seletor"
+                android:drawableRight="@mipmap/down"
+                android:text="2018-11-11 11:11 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_content_normal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="@dimen/txt_title_second"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/inspection_home_right_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_img_seletor"
+                android:drawableRight="@mipmap/down"
+                android:text="2018-11-11 11:11 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_content_normal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/menu_normal_bac"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="3dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/task_home_btn1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/task_home_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/global_gray_text_color"
+                android:layout_marginTop="2dp"
+                android:textSize="@dimen/_12sp"
+                android:text="全部"/>
+
+            <View
+                android:id="@+id/task_home_line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:background="@color/fire_fire"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/global_line_color"/>
+        <LinearLayout
+            android:id="@+id/task_home_btn2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/task_home_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EC3108"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_12sp"
+                android:text="待巡检"/>
+
+            <View
+                android:id="@+id/task_home_line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:background="@color/fire_fire"/>
+
+        </LinearLayout>
+        <View android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/global_line_color"/>
+        <LinearLayout
+            android:id="@+id/task_home_btn3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/task_home_num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3CB370"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_12sp"
+                android:text="已完成"/>
+
+            <View
+                android:id="@+id/task_home_line3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:background="@color/fire_fire"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/task_home_div3"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/global_line_color"/>
+        <LinearLayout
+            android:id="@+id/task_home_btn4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/task_home_num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sp"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/_12sp"
+                android:text="逾期"/>
+
+            <View
+                android:id="@+id/task_home_line4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+
+                android:background="@color/fire_fire"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inspection_home_create_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/create_tasks"/>
+        <TextView
+            android:id="@+id/inspect_add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="创建自定义任务"/>
+
+
+    </LinearLayout>
+
+    <include layout = "@layout/all_no_data"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/inspection_home_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menu_normal_bac"
+        android:layout_marginTop="5dp"
+        app:srlDragRate="0.75"
+        app:srlEnableLoadMore="true"
+        app:srlEnablePureScrollMode="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/inspection_home_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

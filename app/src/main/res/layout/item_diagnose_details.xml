@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_details_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/diagnose_detail_nor"
+            android:drawablePadding="7dp"
+            android:text="高位消防水箱水位高度"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_details_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-4-17 12:12:12"
+            android:textColor="@color/global_gray_text_color"
+            android:textSize="@dimen/_11sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_details_state_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="6dp"
+        android:text="消防栓电压正常"
+        android:textColor="@color/global_gray_text_color"
+        android:textSize="@dimen/_14sp" />
+
+    <TextView
+        android:id="@+id/item_details_state_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:text="描述:消防栓电压正常"
+        android:textColor="@color/global_gray_text_color"
+        android:textSize="@dimen/_13sp" />
+
+    <TextView
+        android:id="@+id/item_details_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:text="导致原因:消防栓电压正常"
+        android:textColor="@color/global_gray_text_color"
+        android:textSize="@dimen/_13sp" />
+
+    <TextView
+        android:id="@+id/item_details_solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:text="解决方案:消防栓电压正常"
+        android:textColor="@color/global_gray_text_color"
+        android:textSize="@dimen/_13sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/custom_recycler"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/global_line_color"/>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/custom_progress1"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/custom_progress2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:progress_background_color="@color/charts_circle_bar_gray"
+        app:progress_end_color="@color/charts_circle_bar_yellow"
+        app:progress_start_color="@color/charts_circle_bar_yellow"
+        app:progress_stroke_width="5dp"
+        app:progress_text_color="@color/black"
+        app:progress_text_size="13sp"
+        app:style="solid_line" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/custom_progress2"
+        app:layout_constraintLeft_toRightOf="@+id/custom_progress1"
+        app:layout_constraintRight_toLeftOf="@+id/custom_progress3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/custom_progress1"
+        app:layout_constraintBottom_toBottomOf="@+id/custom_progress1"
+        app:style="solid_line"
+        app:progress_stroke_width="5dp"
+        app:progress_background_color="@color/charts_circle_bar_gray"
+        app:progress_start_color="@color/charts_circle_bar_blue"
+        app:progress_end_color="@color/charts_circle_bar_blue"
+        app:progress_text_color="@color/black"
+        android:layout_width="70dp"
+        app:progress_text_size="13sp"
+        android:layout_height="70dp" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/custom_progress3"
+        app:layout_constraintLeft_toRightOf="@+id/custom_progress2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/custom_progress2"
+        app:layout_constraintBottom_toBottomOf="@+id/custom_progress2"
+        app:style="solid_line"
+        app:progress_stroke_width="5dp"
+        app:progress_background_color="@color/charts_circle_bar_gray"
+        app:progress_start_color="@color/charts_circle_bar_red"
+        app:progress_end_color="@color/charts_circle_bar_red"
+        app:progress_text_color="@color/black"
+        app:progress_text_size="13sp"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="巡检管理"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableLeft="@mipmap/charge_charts_rect"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="近一周"
+        android:textSize="@dimen/_11sp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/item_charts_button_shape"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/inspect_work_count1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sp"
+        android:textColor="@color/black"
+        android:text="@string/charge_charts_place_holder_count"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progress1"
+        app:layout_constraintLeft_toLeftOf="@+id/custom_progress1"
+        app:layout_constraintRight_toRightOf="@+id/custom_progress1"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/inspect_work_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sp"
+        android:textColor="@color/charts_circle_bar_yellow"
+        android:text="未巡检"
+        app:layout_constraintTop_toBottomOf="@+id/inspect_work_count1"
+        app:layout_constraintLeft_toLeftOf="@+id/inspect_work_count1"
+        app:layout_constraintRight_toRightOf="@+id/inspect_work_count1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/inspect_work_count2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sp"
+        android:textColor="@color/black"
+        android:text="@string/charge_charts_place_holder_count"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progress2"
+        app:layout_constraintLeft_toLeftOf="@+id/custom_progress2"
+        app:layout_constraintRight_toRightOf="@+id/custom_progress2"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/inspect_work_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sp"
+        android:textColor="@color/charts_circle_bar_blue"
+        android:text="正常"
+        app:layout_constraintTop_toBottomOf="@+id/inspect_work_count2"
+        app:layout_constraintLeft_toLeftOf="@+id/inspect_work_count2"
+        app:layout_constraintRight_toRightOf="@+id/inspect_work_count2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/inspect_work_count3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sp"
+        android:textColor="@color/black"
+        android:text="@string/charge_charts_place_holder_count"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progress3"
+        app:layout_constraintLeft_toLeftOf="@+id/custom_progress3"
+        app:layout_constraintRight_toRightOf="@+id/custom_progress3"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/inspect_work_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sp"
+        android:textColor="@color/charts_circle_bar_red"
+        android:text="异常"
+        app:layout_constraintTop_toBottomOf="@+id/inspect_work_count3"
+        app:layout_constraintLeft_toLeftOf="@+id/inspect_work_count3"
+        app:layout_constraintRight_toRightOf="@+id/inspect_work_count3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/menu_normal_bac"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

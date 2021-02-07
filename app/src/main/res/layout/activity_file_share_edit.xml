@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/menu_normal_bac"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="文件标题"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/file_edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:hint="标题"
+                android:paddingLeft="25dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:visibility="gone"
+                android:background="@color/menu_normal_bac" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/menu_normal_bac"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="权限可见"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:text="主管部门"
+                        android:textColor="@color/global_gray_text_color"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/file_edit_check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_selector" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:text="业主企业"
+                        android:textColor="@color/global_gray_text_color"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/file_edit_check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_selector" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:text="维保公司"
+                        android:textColor="@color/global_gray_text_color"
+                        android:textSize="14sp" />
+
+                    <CheckBox
+                        android:id="@+id/file_edit_check3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_selector"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/menu_normal_bac"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="文件分类"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/file_edit_spinner_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:popupBackground="@color/white"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/file_add_file_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/menu_normal_bac"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/select_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="选择文件"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/file_create_select"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/file_share_select_btn"
+                        android:text="选择"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/file_add_file_show"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/select_file"
+                    android:layout_alignRight="@+id/select_file"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/file_create_img" />
+
+                    <TextView
+                        android:id="@+id/file_create_file_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3KB" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/menu_normal_bac"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="备注"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/file_edit_remark"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:background="@null"
+                android:gravity="left|top"
+                android:hint="备注内容"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="bottom"
+                android:background="@color/menu_normal_bac"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/file_edit_save"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/btn_normal_shape"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include layout = "@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/charge_charts_rect"
+        android:drawablePadding="5dp"
+        android:text="各地州实时报警占比"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/mPieChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_name" />
+
+    <View
+        android:id="@+id/space_line_gray"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mPieChart"
+        android:background="@color/menu_normal_bac" />
+
+    <TextView
+        android:id="@+id/title_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/charge_charts_rect"
+        android:drawablePadding="5dp"
+        android:text="各行业实时报警占比"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space_line_gray" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/mPieChart_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title_name2"
+        android:layout_marginBottom="10dp"
+        android:paddingRight="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <GridView
+        android:id="@+id/mPieChart_grid_view"
+        android:layout_below="@+id/mPieChart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="3dp"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="5dp"
+        android:numColumns="2"
+        app:layout_constraintTop_toBottomOf="@id/mPieChart_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:stretchMode="columnWidth"
+        android:layout_marginBottom="5dp"
+        />
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/mPieChart_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        android:background="@color/menu_normal_bac"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

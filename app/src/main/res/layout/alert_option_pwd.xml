@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/fire_manager_alert_shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/fire_manage_alert_one"
+        android:text="标题"
+        android:textSize="@dimen/txt_title_second" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/devide"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/etxt_option_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/edittext_orange"
+        android:cursorVisible="false"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:hint="请输入控制密码"
+        android:textColor="@color/alert_button_color"
+        android:inputType="textPassword"
+        android:textSize="@dimen/txt_content_normal" />
+
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/flat_alizarin"
+        android:textSize="@dimen/txt_content_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/alert_button_bg"
+            android:text="取消"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#a3a3a3" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/alert_button_bg_one"
+            android:text="确定"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

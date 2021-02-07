@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: me.bakumon:bulletinview:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8124c5014ec7dec29fc558e81163efb0/jetified-bulletinview-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8124c5014ec7dec29fc558e81163efb0/jetified-bulletinview-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8124c5014ec7dec29fc558e81163efb0/jetified-bulletinview-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.bakumon/bulletinview/1.0.0/f8998c8c5aa812cc5785ae4e860bada7b386203d/bulletinview-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.bakumon/bulletinview/1.0.0/e4d0be3b8400dca4fbe25d144cd29528ba76ccf0/bulletinview-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

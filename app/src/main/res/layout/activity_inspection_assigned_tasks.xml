@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <com.ynzhxf.nd.xyfirecontrolapp.ui.MyTabLayout
+        android:id="@+id/inspection_assigned_scroll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white">
+
+    </com.ynzhxf.nd.xyfirecontrolapp.ui.MyTabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/inspection_assigned_vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

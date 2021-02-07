@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/toolbar"/>
+    <FrameLayout
+        android:id="@+id/fl_contaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.pili.pldroid.player.widget.PLVideoTextureView
+            android:id="@+id/VideoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" />
+
+        <ImageView
+            android:id="@+id/CoverView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:id="@+id/LoadingView"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="正在加载...."
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_content_normal" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClickFullBtn"
+                android:background="@null"
+                android:src="@mipmap/ic_switch_screen" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/StatInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/txt_content_small"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:padding="@dimen/padding_left_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:text="项目名称"/>
+
+
+</LinearLayout>
+
+

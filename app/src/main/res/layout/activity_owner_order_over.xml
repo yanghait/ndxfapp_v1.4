@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:text="原因"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/over_details_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_over_details_yes"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_normal_shape"
+        android:text="同意"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac">
+
+    <TextView
+        android:id="@+id/hint_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/_14sp"
+        android:gravity="center"
+        android:textColor="@color/global_gray_text_color"
+        android:text="仅显示火灾风险前十"/>
+
+</LinearLayout>

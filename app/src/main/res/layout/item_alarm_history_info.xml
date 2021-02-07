@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_left"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_alarm_time1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="01.05"/>
+
+        <TextView
+            android:id="@+id/item_alarm_time2"
+            android:layout_width="60dp"
+            android:text="2019"
+            android:textColor="@color/gray"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="10dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#bbbbbb" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cir_alarm"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/line1"
+        android:background="@drawable/inspect_flag_shape" />
+
+    <LinearLayout
+        android:layout_width="10dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/cir_alarm"
+        android:layout_alignLeft="@+id/cir_alarm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_order_details_line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#bbbbbb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/cir_alarm"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="6dp"
+            android:layout_height="9dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/layer_list_triangle"
+            />
+
+        <TextView
+            android:id="@+id/item_alarm_text"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/fire_history_info_text"/>
+
+        <TextView
+            android:id="@+id/item_alarm_state"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:text="故障"
+            android:textColor="@color/fire_fire"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/item_alarm_state1"
+            android:layout_width="wrap_content"
+            android:text="(未操作)"
+            android:textColor="@color/gray"
+            android:gravity="right"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

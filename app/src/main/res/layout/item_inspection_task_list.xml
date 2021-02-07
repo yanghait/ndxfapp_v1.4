@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="17dp"
+        android:background="@null"
+        android:src="@mipmap/inspection_list_img"/>
+
+    <TextView
+        android:id="@+id/inspection_home_title"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_marginLeft="7dp"
+        android:text="季检"/>
+    <TextView
+        android:id="@+id/inspect_count"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:text=""
+        android:textColor="@color/global_gray_text_color"
+        android:layout_alignTop="@+id/inspection_home_state"
+        android:layout_toLeftOf="@+id/inspection_home_state"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/inspection_home_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="14sp"
+        android:layout_alignBottom="@+id/inspection_home_title"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="17dp"
+        android:textColor="@color/global_button_stroke_color"
+        android:drawableRight="@drawable/front_new"
+        android:drawablePadding="4dp"
+        android:text="待巡检 "/>
+
+    <TextView
+        android:id="@+id/inspection_home_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inspection_home_title"
+        android:layout_alignLeft="@+id/inspection_home_title"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:textColor="@color/global_button_stroke_color"
+        android:text="项目"/>
+    <TextView
+        android:id="@+id/inspection_home_head_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inspection_home_project_name"
+        android:layout_alignLeft="@+id/inspection_home_project_name"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/global_button_stroke_color"
+        android:text="负责人"/>
+    <TextView
+        android:id="@+id/inspection_home_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inspection_home_head_name"
+        android:layout_alignLeft="@+id/inspection_home_head_name"
+        android:layout_marginTop="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/global_button_stroke_color"
+        android:text="开始时间"/>
+    <Button
+        android:id="@+id/item_state_result"
+        android:layout_width="43dp"
+        android:layout_height="23dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/inspection_home_head_name"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/inspection_item_btn"
+        android:textColor="@color/white"
+        android:layout_marginRight="25dp"
+        android:textSize="12sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="正常"/>
+    <TextView
+        android:id="@+id/inspection_home_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inspection_home_start_time"
+        android:layout_alignLeft="@+id/inspection_home_start_time"
+        android:layout_marginTop="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/global_button_stroke_color"
+        android:layout_marginBottom="10dp"
+        android:text="结束时间"/>
+
+    <View
+        android:id="@+id/inspection_home_task_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/inspection_home_end_time"
+        android:background="@color/global_line_color"/>
+
+
+    <Button
+        android:id="@+id/inspection_assigned_task_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/inspection_home_task_line"
+        android:layout_toLeftOf="@+id/inspection_view_task_button"
+        android:layout_gravity="center_vertical"
+        android:layout_alignBottom="@+id/inspection_view_task_button"
+        android:layout_marginRight="15dp"
+        android:visibility="invisible"
+        android:background="@drawable/button_worklist_shape"
+        android:text="设置负责人"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/inspection_view_task_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/inspection_home_task_line"
+        android:layout_toLeftOf="@+id/inspection_home_task_button"
+        android:layout_alignBottom="@+id/inspection_home_task_button"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_worklist_shape"
+        android:text="分配任务"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/inspection_home_task_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/inspection_home_task_line"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_worklist_one_shape"
+        android:text="查看记录"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/tool_bar"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ynzhxf.nd.xyfirecontrolapp">
+    <!-- 允许网络通信 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 读写文件的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 设置手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Required -->
+    <permission
+        android:name="com.ynzhxf.nd.xyfirecontrolapp.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.ynzhxf.nd.xyfirecontrolapp.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.ynzhxf.nd.xyfirecontrolapp.tool.ApplicationPlatform"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--<meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />-->
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.SplashActivity"
+            android:theme="@style/SplashTheme">
+
+            <meta-data
+                android:name="android.notch_support"
+                android:value="true" />
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.LoginActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.compentent.CompetentMainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectInfoActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.SystemInfoActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.compentent.CompententAreaActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.compentent.CompententSearchProjectActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.compentent.CompententAreaCoutryActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectVideoListActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.VideoPlayActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectSystemListActivity"
+            android:label="@string/title_activity_project_system_list" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.EquipmentLabelActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.LabelInfoRecordActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.FireAlarmHostActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.FireAlarmHostBuildActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.FireAlarmPointListActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectRealAlarmActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectHistoryAlarmActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.NewsListActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.NewsInfoActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.UserPwdChangeActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.EnterpriseMainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.message.AlarmMessageListActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.MaintenanceManageActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.message.AlarmMessageInfoActivity"
+            android:label="@string/title_activity_alarm_message_info" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerFinishOrderActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerAuditOrderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerCreateOrderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerWorkOrderDetailsActivity"
+            android:launchMode="singleTop" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerMyWorkOrderActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.OwnerOrderOverDetailsActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.MaintenanceCompanyActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyConfirmOrderActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyHandOverOrderActivity" />
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyBackFillActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyQrCodeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyQrCodeMaintainActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.BaseActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanySearchProjectActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.MaintenanceChargeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanySearchForHomeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.CompanyProjectInfoActivity" />
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ChargeProjectInfoActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.FileShareHomeActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.FileShareMyFileActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.FileShareEditSaveActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileShareCreateFileActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileShareShowDetailActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileShareWeFileActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileShareProgressUpdateActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.OperationalPlansActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileTypeListActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileTypeEditorActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.FileShareSearchProjectActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.file.OperationalPlanDetail" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.owner.HistoryAlarmCreateOrderActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionTaskHomeActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionItemListActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionTypeCreateTaskActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionResponsiblePersonActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionRecordsActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionQrCodeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionResultSaveActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionAssignedTasksActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionSetPersonActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionSettingActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.InspectionSettingGetUserListActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.FireAlarmHistoryInfoActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectStatisticsActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectStatisticsDetailsActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionHomeCompanyActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanyCreateTaskActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanySettingActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanySettingGetUserActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanySystemListActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanyItemListActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanyItemActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanyResultSaveActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectStatisticsListErrorInfo" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectInfoMessageDataActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectStatisticsDetailsErrorActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectStatisticsLegendInfoActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.FireAlarmProbeInfoActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.statement.StatisticsStatementActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.statement.StatementSearchActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.ProjectRealAlarmDetailActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.VideoPhotoSelectActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.company.CompanyHangUpActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection.company.InspectionCompanyForOwnerHomeActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.DumplingsVideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="fullSensor" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.diagnose.DeviceDiagnoseHomeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.diagnose.DeviceDiagnoseDetailsActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.diagnose.DeviceDiagnoseHomeFinishActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.assessment.RiskAssessmentHomeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.assessment.RiskAssessmentStateTypeActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.assessment.RiskAssessmentFloorListActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.charge.ChargeIndexPageSelectedActivity" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.company.CompanyTwoPageActivity" />
+
+        <activity
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.PLVideoTextureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.basenode.PLVideoTextureHomeActivity"/>
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.OverviewMessageActivity"/>
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.charge.ChargeCurrentAlarmActivity"/>
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.charge.ChargeChartsHistoryActivity"/>
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.charge.ChargeChartsProjectActivity"/>
+
+        <activity android:name="com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.charge.ChargeChartsProjectDetailsActivity"/>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ghhPecGGX0QGULuTzvqGsMX7eXX3kv62">
+
+        </meta-data>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+
+        </service>
+        <receiver
+            android:name="com.ynzhxf.nd.xyfirecontrolapp.tool.MyReceiver"
+            android:enabled="true"
+            android:exported="false"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ynzhxf.nd.xyfirecontrolapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Jpush Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ynzhxf.nd.xyfirecontrolapp" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.ynzhxf.nd.xyfirecontrolapp.DataProvider"
+            android:exported="false"
+            android:process=":pushcore" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.ynzhxf.nd.xyfirecontrolapp" />
+            </intent-filter>
+
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.ynzhxf.nd.xyfirecontrolapp.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <!--<receiver
+            android:name="com.example.jpushdemo.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash;Required  用户注册SDK的intent&ndash;&gt;
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash;Required  用户接收SDK消息的intent&ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash;Required  用户接收SDK通知栏信息的intent&ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash;Required  用户打开自定义通知栏的intent&ndash;&gt;
+                <action android:name="cn.jpush.android.intent.CONNECTION" />&lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;
+                <category android:name="您应用的包名" />
+            </intent-filter>
+        </receiver>-->
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <!--<receiver android:name="com.example.jpushdemo.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="您应用的包名"></category>
+            </intent-filter>
+        </receiver>-->
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="0ca9edb138ff7a075f7e3e21"
+            tools:replace="android:value"/>
+        <!--  </>值来自开发者平台取得的AppKey-->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. Theme.AppCompat.Light.NoActionBar-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="edittext_orange" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/font_orange_color</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/yellow_star</item>
+    </style>
+
+    <!--dialog -->
+    <style name="dialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="anim_panel_up_from_bottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="OverFlowMenuTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="overlapAnchor">false</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:background">@mipmap/launcher_icon1</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/launcher_icon</item>
+        <item name="android:windowFullscreen">true</item>
+        &lt;!&ndash;不让windowBackground延申到navigation bar区域&ndash;&gt;
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    </style>-->
+
+</resources>

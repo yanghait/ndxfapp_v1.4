@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/overviewDate"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="15dp"
+            android:textSize="16sp"
+            android:text="2018-12-12" />
+
+        <TextView
+            android:id="@+id/overviewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:text="发生报警项目8个，报警总数24个，高风险项目2个，待处理工单数量48个" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/space_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/topView"
+        android:background="@color/menu_normal_bac" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/space_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

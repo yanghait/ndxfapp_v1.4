@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/risk_assessment_state_color_green"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/risk_home_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="火灾风险评估"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:src="@mipmap/back"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/menu_normal_bac"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/risk_assessment_home_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/risk_assessment_state_color_green"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/risk_assessment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sp"
+                    android:text=""/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <me.itangqi.waveloadingview.WaveLoadingView
+                        android:id="@+id/waveLoadingView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        app:wlv_borderColor="@color/risk_assessment_state_color_green"
+                        app:wlv_borderWidth="3dp"
+                        app:wlv_progressValue="100"
+                        app:wlv_round_rectangle="true"
+                        app:wlv_shapeType="circle"
+                        app:wlv_titleCenter=""
+                        app:wlv_titleCenterColor="@color/risk_assessment_state_color_green"
+                        app:wlv_titleCenterSize="40sp"
+                        app:wlv_titleCenterStrokeWidth="2dp"
+                        app:wlv_triangle_direction="north"
+                        app:wlv_waveAmplitude="10"
+                        app:wlv_waveColor="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/cir_rotate"
+                        android:layout_width="136dp"
+                        android:layout_height="136dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/cir_rate" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/risk_assessment_home_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="安全"
+                            android:textColor="@color/risk_assessment_state_color_green"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/risk_assessment_home_score_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="当前风险等级"
+                            android:textColor="@color/risk_assessment_state_color_green"
+                            android:textSize="@dimen/_12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|left"
+                            android:text="上次评估时间"
+                            android:textColor="@color/project_diagnose_normal_text_color"
+                            android:textSize="@dimen/_10sp" />
+
+                        <TextView
+                            android:id="@+id/assessment_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left"
+                            android:text="2019-04-29\n12:12:12"
+                            android:textColor="@color/project_diagnose_normal_text_color"
+                            android:textSize="@dimen/_10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/risk_start_assess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hint_message"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="评估中..."
+                            android:textColor="@color/project_diagnose_normal_text_color"
+                            android:textSize="@dimen/_10sp"
+                            android:visibility="invisible"
+                             />
+
+                        <Button
+                            android:id="@+id/start_assessment"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/project_status_btn_start"
+                            android:text="开始评估"
+                            android:textColor="@color/risk_assessment_state_color_green"
+                            android:textSize="@dimen/_12sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count1"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="全部"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/risk_assessment_state_color_green"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="安全"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count3"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/risk_assessment_state_color_yellow"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="轻度"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count4"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/risk_assessment_state_color_orange"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="中度"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/risk_assessment_state_color_red1"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="高度"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/risk_count_layout6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/risk_count6"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/risk_assessment_state_color_red2"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="严重"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/all_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="50dp"
+                android:visibility="gone"
+                android:background="@color/menu_normal_bac"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:src="@mipmap/no_data" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="没有数据哦"
+                    android:textColor="@color/global_gray_text_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

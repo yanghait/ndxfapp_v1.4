@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_01"
+        android:layout_width="10dp"
+        android:background="@drawable/cir_yellow_oval"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        app:layout_constraintLeft_toRightOf="@id/text_01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:text="火灾自动报警系统"
+        android:textSize="@dimen/_14sp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        android:layout_marginTop="10dp"
+        android:text="报警值"/>
+
+    <TextView
+        android:id="@+id/text_content1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/risk_assessment_state_color_red1"
+        app:layout_constraintTop_toTopOf="@id/text_02"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:text="故障"/>
+
+    <TextView
+        android:id="@+id/text_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/text_02"
+        app:layout_constraintLeft_toLeftOf="@id/text_02"
+        android:layout_marginTop="3dp"
+        android:text="事件类型"/>
+
+    <TextView
+        android:id="@+id/text_content2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toTopOf="@id/text_03"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:text="故障报警"/>
+
+    <TextView
+        android:id="@+id/text_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/text_03"
+        app:layout_constraintLeft_toLeftOf="@id/text_03"
+        android:layout_marginTop="3dp"
+        android:text="报警类型"/>
+
+    <TextView
+        android:id="@+id/text_content3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toTopOf="@id/text_04"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:text="状态量变化"/>
+
+    <TextView
+        android:id="@+id/text_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/text_04"
+        app:layout_constraintLeft_toLeftOf="@id/text_04"
+        android:layout_marginTop="3dp"
+        android:text="时间"/>
+
+    <TextView
+        android:id="@+id/text_content4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/global_gray_text_color"
+        app:layout_constraintTop_toTopOf="@id/text_05"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:text="2019-9-10 21:21:00"/>
+
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/text_content4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/menu_normal_bac"
+        android:layout_marginTop="10dp"
+        android:layout_height="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

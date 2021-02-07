@@ -1,0 +1,367 @@
+<!--主管部门首页布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        app:srlDragRate="0.75"
+        app:srlEnableLoadMore="false"
+        app:srlEnablePureScrollMode="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/refreshLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@color/normal_gray_global"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="295dp"
+                    android:paddingTop="30dp"
+                    android:background="@mipmap/bac_index"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/orgName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_top_bottom"
+                        android:paddingTop="@dimen/padding_top_bottom"
+                        android:text=""
+                        android:textColor="@color/backgroundcolor"
+                        android:textSize="@dimen/txt_title_second"
+                        android:textStyle="bold" />
+
+                    <com.ynzhxf.nd.xyfirecontrolapp.ui.RingDraw
+                        android:id="@+id/event_total"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="近24小时事件数量"
+                        android:textSize="@dimen/txt_content_normal"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!--通知公告-->
+                <LinearLayout
+                    android:id="@+id/owner_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:background="@color/white"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="11dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:background="@mipmap/owner_notice" />
+
+                    <com.ynzhxf.nd.xyfirecontrolapp.ui.VerticalScrollLayout
+                        android:id="@+id/tv_notice_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:text="习近平：抢占先机迎难而上建设世界科技强国"
+                        app:vsl_animDuration="1000"
+                        app:vsl_isCusDuration="true"
+                        app:vsl_sleepTime="2000" />
+
+                    <me.bakumon.library.view.BulletinView
+                        android:id="@+id/bulletin_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:bulletinEnterAnim="@anim/bulletin_item_enter"
+                        app:bulletinLeaveAnim="@anim/bulletin_item_leave"
+                        app:bulletinInterval="3000" />
+
+                    <TextView
+                        android:id="@+id/owner_more_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="更多>" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/menu_normal_bac"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/menu_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="3dp"
+                        android:visibility="invisible"
+                        android:paddingTop="@dimen/padding_left_right">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/main_statistics" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_top_bottom"
+                            android:text="统计分析"
+                            android:textColor="@color/font_orange_color"
+                            android:textSize="@dimen/txt_content_normal"
+                            android:textStyle="bold"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/padding_top_bottom"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:text="实时报警数量:"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/txt_content_normal" />
+
+                        <TextView
+                            android:id="@+id/real_alarm_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:text=""
+                            android:textColor="@color/flat_alizarin"
+                            android:textSize="@dimen/txt_content_normal" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/chart_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/white"
+                    />
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/menu_normal_bac"/>
+
+                <TableLayout
+                    android:id="@+id/enter_com_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/margin_top_bottom"
+                    android:paddingBottom="@dimen/margin_top_bottom"
+                    android:stretchColumns="0,1,2,3">
+
+                    <TableRow>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/menu_com_internet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+
+                                    android:layout_width="@dimen/menu_img"
+                                    android:layout_height="@dimen/menu_img"
+                                    android:src="@mipmap/com_internet" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="联网项目"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_content_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/menu_com_manage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/menu_img"
+                                    android:layout_height="@dimen/menu_img"
+                                    android:src="@mipmap/com_manage" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="维保管理"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_content_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/menu_com_file_share"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/menu_img"
+                                    android:layout_height="@dimen/menu_img"
+                                    android:src="@mipmap/com_file_share" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="文件分享"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_content_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/menu_com_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/menu_img_seletor"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/menu_img"
+                                    android:layout_height="@dimen/menu_img"
+                                    android:src="@mipmap/com_message" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="通知公告"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_content_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_layout_shape">
+
+                    <LinearLayout
+                        android:id="@+id/menu_press"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/abnormal_project"
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:layout_marginLeft="6dp"
+                            android:src="@drawable/circle_flag" />
+
+                        <TextView
+                            android:id="@+id/fragment_project_list_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_top_bottom"
+                            android:text="联网项目"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/txt_content_normal"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="visible"
+                    android:background="@color/white"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pro_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

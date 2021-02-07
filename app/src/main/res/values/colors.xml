@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f03309</color>
+    <color name="flat_turquoise">#1ABC9C</color>
+    <color name="flat_greensea">#16A085</color>
+    <color name="flat_wetasphalt">#34495E</color>
+    <color name="flat_midnightblue">#2C3E50</color>
+
+    <color name="flat_peterriver">#3498DB</color>
+
+    <color name="flat_alizarin">#E74C3C</color>
+    <color name="flat_pomegranate">#C0392B</color>
+    <color name="backgroundcolor">#fafafa</color>
+    <color name="item_select">#30e9af8e</color>
+
+    <color name="white">#fff</color>
+    <color name="gray">#cbc6c6</color>
+    <color name="gray1">#f2efef</color>
+
+    <color name="gray_op">#50cbc6c6</color>
+
+    <color name="devide">#f9e6de</color>
+    <color name="font_orange_color">#eb5c15</color>
+
+    <color name="fire_normal">#019c41</color>
+    <color name="fire_fault">#f8a45b</color>
+    <color name="fire_action">#fdcd69</color>
+    <color name="fire_close">#62bffc</color>
+    <color name="fire_manage">#c78fce</color>
+    <color name="fire_open">#cf888c</color>
+    <color name="fire_feed">#76c9d1</color>
+    <color name="fire_fire">#fb5957</color>
+    <color name="fire_outline">#7191f8</color>
+
+
+    <color name="button_sure_press">#8bc4ea</color>
+    <color name="button_cancel_press">#f2aa87</color>
+
+    <!--<color name="menu_normal_bac">#90f7f4f0</color>-->
+
+    <color name="menu_normal_bac">#eeeeee</color>
+    <color name="normal_gray_global">#eeeeee</color>
+    <color name="primary_white">#ffffff</color>
+
+    <color name="yellow_star">#ffc125</color>
+
+    <color name="cir_project_left">#9c6eac</color>
+    <color name="cir_project_right">#e5599b</color>
+
+    <color name="primary_text_color">#ec3108</color>
+
+    <color name="tool_bar">#3E7BFC</color>
+
+    <color name="blackText">#FF333333</color>
+
+    <color name="drop_down_selected">#7B1FA2</color>
+
+    <color name="drop_down_unselected">#111111</color>
+
+    <color name="notice_text_color">#3094c2</color>
+    <color name="inspection_list_text">#999999</color>
+
+    <color name="inspection_list_btn">#3cb371</color>
+
+    <color name="inspect_home_btn_selected">#FBD6CE</color>
+
+    <color name="login_text_hint_color">#eab7a8</color>
+
+    <color name="login_text_info_color">#fcd2c3</color>
+
+    <color name="fire_history_info_cir">#ffa924</color>
+
+    <color name="fire_history_info_text">#48a2cb</color>
+
+    <color name="pie_event_color">#fc595a</color>
+
+    <color name="yellow_text_statistics1">#ffa924</color>
+
+    <color name="yellow_text_statistics2">#48a2cb</color>
+
+    <color name="Expandable_item_two">#ffc655</color>
+
+    <color name="Expandable_item_three">#62bffc</color>
+
+    <color name="Expandable_item_four">#37d6b6</color>
+
+    <color name="expandable_sum_text_color">#2e8edf</color>
+
+    <color name="statistics_grad_text1">#fed3bb</color>
+    <color name="statistics_grad_text2">#cbe0fd</color>
+
+    <color name="progress_bar_color">#fdb92e</color>
+
+    <color name="statistics_blue">#2e8edf</color>
+
+    <!--全局灰色字体和分割线颜色-->
+    <color name="global_line_color">#d7d7d7</color>
+    <color name="global_gray_text_color">#a9a9a9</color>
+
+    <color name="global_button_stroke_color">#a3a3a3</color>
+
+    <color name ="alert_title_color">#f16f1e</color>
+    <color name ="alert_button_color">#d0d0d0</color>
+
+    <color name="orange_new_cir_color">#ffb408</color>
+
+    <color name="login_text_color">#bab1b1</color>
+
+    <color name="search_view_text_color">#bababa</color>
+
+    <color name="real_data_item_text_color">#e30404</color>
+
+
+    <color name="device_diagnose_green">#2fc68c</color>
+    <color name="device_diagnose_yellow">#ffbc01</color>
+    <color name="device_diagnose_orange">#3E7BFC</color>
+
+    <color name="device_diagnose_orange_bar_normal">#FF8234</color>
+    <color name="device_diagnose_orange_bar_selected">#FFAB63</color>
+
+    <color name="device_diagnose_yellow_bar_normal">#F1C440</color>
+    <color name="device_diagnose_yellow_bar_selected">#F7D16A</color>
+
+    <color name="device_diagnose_green_bar_normal">#65d4aa</color>
+    <color name="device_diagnose_green_bar_selected">#a0f0d2</color>
+
+
+    <color name="project_diagnose_normal_text_color">#e8e8e8</color>
+    
+    <color name="risk_assessment_state_color_green">#2fc68c</color>
+    <color name="risk_assessment_state_color_yellow">#ffbc01</color>
+    <color name="risk_assessment_state_color_orange">#fd6405</color>
+    <color name="risk_assessment_state_color_red1">#F93E0D</color>
+    <color name="risk_assessment_state_color_red2">#CE1705</color>
+
+    <color name="risk_item_add_view_back_color">#ececec</color>
+    
+    <color name="charge_bar_chart_device">#ffb107</color>
+    <color name="charge_bar_chart_risk">#fb5f2f</color>
+    <color name="charge_bar_chart_alarm">#1890ff</color>
+
+
+    <color name="charge_children_selected">#7e8595</color>
+
+    <color name="work_message_color">#3D9DFE</color>
+    <color name="inspect_message_color">#6A7FF8</color>
+    <color name="alarm_message_color">#CD100F</color>
+
+    <color name="charts_circle_bar_yellow">#FF9200</color>
+    <color name="charts_circle_bar_blue">#3D9DFE</color>
+    <color name="charts_circle_bar_red">#EF4561</color>
+    <color name="charts_circle_bar_gray">#D8D8D8</color>
+
+    <color name="charts_radio_select">#FD7724</color>
+</resources>

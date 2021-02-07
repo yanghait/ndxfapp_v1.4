@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/owner_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:srlDragRate="0.75"
+        app:srlEnableLoadMore="false"
+        app:srlEnablePureScrollMode="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/owner_banner"
+                        android:layout_width="match_parent"
+                        app:image_scale_type="fit_xy"
+                        app:indicator_drawable_selected="@drawable/cir_red_shape"
+                        app:indicator_drawable_unselected="@drawable/cir_white_shape"
+                        android:layout_height="200dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/owner_banner"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:background="@drawable/owner_notice1" />
+
+                        <me.bakumon.library.view.BulletinView
+                            android:id="@+id/bulletin_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            app:bulletinEnterAnim="@anim/bulletin_item_enter"
+                            app:bulletinInterval="3000"
+                            app:bulletinLeaveAnim="@anim/bulletin_item_leave" />
+
+                        <TextView
+                            android:id="@+id/owner_more_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center_vertical"
+                            android:text="更多>" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/menu_normal_bac" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/slide_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tl_indicator_color="@color/tool_bar"
+                    app:tl_indicator_height="2dp"
+                    app:tl_indicator_margin_left="2dp"
+                    app:tl_indicator_width_equal_title="true"
+                    app:tl_tab_padding="0dp"
+                    app:tl_tab_space_equal="true"
+                    app:tl_textSelectColor="@color/black"
+                    app:tl_textUnselectColor="@color/charge_children_selected"
+                    app:tl_textsize="@dimen/_15sp" />
+
+                <com.ynzhxf.nd.xyfirecontrolapp.widget.FragmentViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                </com.ynzhxf.nd.xyfirecontrolapp.widget.FragmentViewPager>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

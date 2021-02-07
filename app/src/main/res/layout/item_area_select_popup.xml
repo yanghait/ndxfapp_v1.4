@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="5dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/area_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="云南省"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sp" />
+
+    <com.ynzhxf.nd.xyfirecontrolapp.ui.CustomGridView
+        android:id="@+id/area_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+
+    </com.ynzhxf.nd.xyfirecontrolapp.ui.CustomGridView>
+
+</LinearLayout>

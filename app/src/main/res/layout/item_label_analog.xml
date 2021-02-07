@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--标签模拟量类型列表-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingTop="10dp"
+    >
+    <LinearLayout
+        android:id="@+id/btn_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="我的"
+                    android:textColor="@color/white"
+                    android:background="@drawable/label_alarm_tir_shape"
+                    android:textSize="@dimen/txt_content_normal"/>
+
+                <!--<LinearLayout
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/tet"
+                    android:layout_marginLeft="@dimen/padding_top_bottom"
+                    android:orientation="vertical">-->
+                    <TextView
+                        android:id="@+id/txt_name_rect"
+                        android:layout_width="12dp"
+
+                        android:layout_height="12dp"
+                        android:background="@drawable/tet"
+                        android:layout_marginLeft="@dimen/padding_top_bottom"
+                        />
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_standar_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginRight="35dp"
+                android:textColor="@color/fire_fire"
+                android:textSize="@dimen/txt_content_normal"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:text="标准值"
+                android:gravity="center"
+                android:textColor="@color/global_gray_text_color"
+                android:textSize="@dimen/txt_content_normal"/>
+            <View
+                android:layout_height="0.5dp"
+                android:background="#686868"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/padding_left_right"
+                android:layout_width="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:paddingRight="35dp"
+                >
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="invisible"
+                    android:layout_marginRight="25dp"
+                    android:text=""/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_offset"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:text="-"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_content_normal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:text="偏差率"
+                        android:gravity="center"
+                        android:textColor="@color/global_gray_text_color"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_content_normal"/>
+
+                </LinearLayout>
+
+                <com.ynzhxf.nd.xyfirecontrolapp.ui.CircularDraw
+                    android:id="@+id/cd_offeset"
+                    android:layout_width="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="50dp">
+
+                </com.ynzhxf.nd.xyfirecontrolapp.ui.CircularDraw>
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:background="@drawable/button_cancel"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_gravity="right"
+                android:textSize="@dimen/txt_content_normal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="@dimen/margin_top_bottom"
+                android:visibility="gone"
+                android:text="历史趋势"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="96dp"
+                android:layout_height="96dp">
+                <com.ynzhxf.nd.xyfirecontrolapp.ui.MeterValueDraw
+                    android:id="@+id/v_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <FrameLayout
+                    android:id="@+id/fl_shui"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.ynzhxf.nd.xyfirecontrolapp.ui.WaterImageAnimation
+                        android:id="@+id/img_water"
+                        android:layout_width="288dp"
+                        android:layout_marginTop="96dp"
+                        android:layout_height="96dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/water"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:background="@null"
+                        android:src="@drawable/bac_white_new_one"/>
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/txt_tran_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/padding_top_bottom"
+                    android:textSize="@dimen/txt_content_normal"
+                    android:textColor="@color/black" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textSize="@dimen/txt_content_normal"
+                android:textColor="@color/global_gray_text_color"
+                android:text="当前值" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_height="5dp"
+        android:background="@color/menu_normal_bac"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"/>
+</LinearLayout>

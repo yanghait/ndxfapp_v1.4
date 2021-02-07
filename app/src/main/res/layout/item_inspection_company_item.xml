@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/item_yellow_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/inspect_flag_shape" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/item_yellow_shape"
+            android:text="灭火器"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_yellow_shape"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="巡检人: 李某某"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_person"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:text="完成时间: 2018-8-21 16:21"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_person"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="待巡检"
+        android:textColor="@color/fire_fire"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/item_state_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/item_state"
+        android:layout_alignBottom="@+id/item_time"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/item_time"
+        android:background="@drawable/inspection_item_btn"
+        android:text="正常"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_time"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/menu_normal_bac" />
+
+        <Button
+            android:id="@+id/item_inspection"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/line"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_worklist_one_shape"
+            android:text="巡检"
+            android:textColor="@color/flat_alizarin"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

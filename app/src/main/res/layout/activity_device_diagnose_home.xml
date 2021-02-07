@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/diagnose_home_diagnose_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/device_diagnose_orange"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/diagnose_home_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:src="@mipmap/back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="设备诊断"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:src="@mipmap/back"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveLoadingView"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                app:wlv_borderColor="@color/device_diagnose_orange"
+                app:wlv_borderWidth="3dp"
+                app:wlv_progressValue="100"
+                app:wlv_round_rectangle="true"
+                app:wlv_shapeType="circle"
+                app:wlv_titleCenter=""
+                app:wlv_titleCenterColor="@color/device_diagnose_orange"
+                app:wlv_titleCenterSize="40sp"
+                app:wlv_titleCenterStrokeWidth="2dp"
+                app:wlv_triangle_direction="north"
+                app:wlv_waveAmplitude="10"
+                app:wlv_waveColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/cir_rotate"
+                android:layout_width="195dp"
+                android:layout_height="195dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cir_rate" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/diagnose_text_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignRight="@+id/cir_rotate"
+                    android:textColor="@color/device_diagnose_orange"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/diagnose_text_score_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignRight="@+id/cir_rotate"
+                    android:textColor="@color/device_diagnose_orange"
+                    android:textSize="@dimen/_18sp"
+                    android:text=" 分"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/device_diagnose_progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/device_diagnose_orange_bar_normal">
+
+        <TextView
+            android:id="@+id/device_diagnose_progress_bar"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/device_diagnose_orange_bar_selected" />
+
+        <TextView
+            android:id="@+id/device_diagnose_progress_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="正在诊断:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/diagnose_home_finish"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:background="@drawable/diagnose_home_btn_shape"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="完成"/>
+
+</LinearLayout>

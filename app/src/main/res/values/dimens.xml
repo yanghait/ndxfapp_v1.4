@@ -1,0 +1,62 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--菜单图片大小-->
+    <dimen name="menu_img_big">50dp</dimen>
+    <dimen name="menu_img">40dp</dimen>
+    <dimen name="menu_img_small">18dp</dimen>
+
+    <dimen name="item_img_three">64dp</dimen>
+    <dimen name="item_img_two">48dp</dimen>
+    <dimen name="item_img_one">32dp</dimen>
+
+    <dimen name="txt_title_large">20sp</dimen>
+    <!--字体-->
+    <!-- 一级标题的字体大小-->
+    <dimen name="txt_title_first">18sp</dimen>
+    <!-- 二级标题的字体大小-->
+    <dimen name="txt_title_second">16sp</dimen>
+    <!--正常内容的字体大小-->
+    <dimen name="txt_content_normal">14sp</dimen>
+    <!--正常内容的小一号字体大小-->
+    <dimen name="txt_content_small">13sp</dimen>
+
+    <dimen name="txt_content_small_two">12sp</dimen>
+
+    <dimen name="txt_content_small_three">11sp</dimen>
+
+    <!--左右内边距-->
+    <dimen name="padding_left_right">5dp</dimen>
+
+    <dimen name="padding_top_bottom">5dp</dimen>
+
+    <dimen name="top_bottom_margin">5dp</dimen>
+
+    <dimen name="item_margin">3dp</dimen>
+
+    <dimen name="margin_top_bottom">10dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="line_spacing">3dp</dimen>
+
+
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_11sp">11sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_13sp">13sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_17sp">17sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_19sp">19sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+
+    <dimen name="_40dp">40dp</dimen>
+
+
+    <dimen name="timer_shaft_time_text_size">11sp</dimen>
+
+    <dimen name="charge_charts_details_text_width">50dp</dimen>
+
+</resources>

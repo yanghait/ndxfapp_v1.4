@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_normal_bac"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="bottom"
+        android:paddingBottom="8dp"
+        android:layout_marginRight="7dp"
+        android:text="申请终止工单"
+        android:textSize="@dimen/_16sp" />
+
+    <EditText
+        android:id="@+id/ed_reason"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/edt_over_bac"
+        android:gravity="left|top"
+        android:hint="请输入终止原因"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sp" />
+
+
+    <Button
+        android:id="@+id/btn_sure"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/buttton_finish_order"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>
