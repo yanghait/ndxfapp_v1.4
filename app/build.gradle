@@ -10,19 +10,54 @@ android {
         versionName "1.2.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true //Howard 2017-08-31 解决方法数超过65536的问题
+        flavorDimensions "versionCode"
 
         ndk {
             //选择要添加的对应cpu类型的.so库。
             abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
-
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-//                JPUSH_APPKEY : "ce408457907fa7693aedfb3f", //JPush上注册的包名对应的appkey.//曲靖端
-                JPUSH_APPKEY : "0ca9edb138ff7a075f7e3e21",//兴义端
-                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                JPUSH_APPKEY : "ce408457907fa7693aedfb3f",//值来自开发者平台取得的AppKey
+                JPUSH_CHANNEL: "default_developer",
         ]
+
+    }
+
+    productFlavors {
+        hostTest {
+            applicationId "com.ynzhxf.nd.firecontrolapp"
+            resValue "string", "app_name", "云上智慧消防_演示"
+            buildConfigField "String", "API_URL", '"http://121.4.222.2:8080"'
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "ce408457907fa7693aedfb3f",//值来自开发者平台取得的AppKey
+                    JPUSH_CHANNEL: "default_developer",
+            ]
+        }
+        xyfirecontrolapp_dev {//兴义端
+            applicationId "com.ynzhxf.nd.xyfirecontrolapp"
+            resValue "string", "app_name", "贵州云上智慧消防"
+
+            buildConfigField "String", "API_URL", '"http://fire.jinzhoucloud.com"'
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "0ca9edb138ff7a075f7e3e21",//值来自开发者平台取得的AppKey
+                    JPUSH_CHANNEL: "default_developer",
+            ]
+        }
+        firecontrolapp_dev {//曲靖端
+            applicationId "com.ynzhxf.nd.firecontrolapp"
+            resValue "string", "app_name", "云上智慧消防"
+            buildConfigField "String", "API_URL", '"http://www.ynzhxf.com:8181"'
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "ce408457907fa7693aedfb3f",//值来自开发者平台取得的AppKey
+                    JPUSH_CHANNEL: "default_developer",
+            ]
+        }
+
     }
 
     compileOptions {
@@ -184,7 +219,7 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
     // 集成内存泄漏检测工具  修复内存泄漏 优化内存占用和性能
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0'
 
     // banner
     implementation 'com.youth.banner:banner:1.4.10'

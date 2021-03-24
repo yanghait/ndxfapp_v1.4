@@ -1,8 +1,11 @@
 package com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.inspection;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,7 @@ import com.ynzhxf.nd.xyfirecontrolapp.pars.URLConstant;
 import com.ynzhxf.nd.xyfirecontrolapp.util.HelperTool;
 import com.ynzhxf.nd.xyfirecontrolapp.util.LogUtils;
 import com.ynzhxf.nd.xyfirecontrolapp.view.HelperView;
+import com.ynzhxf.nd.xyfirecontrolapp.view.NFCReadActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.fragment.BaseFragment;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -38,6 +42,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import okhttp3.Call;
+
+import static android.app.Activity.RESULT_OK;
 
 public class InspectionItemFragment extends BaseFragment {
 
@@ -58,6 +64,10 @@ public class InspectionItemFragment extends BaseFragment {
     protected String systemName;
 
     protected TextView mNoDataContent;
+
+    private static final int QRSCAN_CODE = 1001;
+
+    private static final int NFC_CODE = 1002;
 
     @Nullable
     @Override
@@ -243,15 +253,6 @@ public class InspectionItemFragment extends BaseFragment {
                                         inspectionButton.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View view) {
-
-//                                                Intent intent = new Intent(mContext, InspectionQrCodeActivity.class);
-//                                                intent.putExtra("taskId", taskId);
-//                                                intent.putExtra("Name", bean.getName());
-//                                                intent.putExtra("Remark", bean.getRemark());
-//                                                intent.putExtra("AreaId", bean.getAreaId());
-//                                                intent.putExtra("projectId", projectId);
-//                                                startActivity(intent);
-
                                                 goToQrCode(bean);
                                             }
                                         });
@@ -273,14 +274,68 @@ public class InspectionItemFragment extends BaseFragment {
                 });
     }
 
+    InspectionItemListBean mBean;
+    int select = 0;
+
     protected void goToQrCode(InspectionItemListBean bean) {
-        Intent intent = new Intent(mContext, InspectionQrCodeActivity.class);
-        intent.putExtra("taskId", taskId);
-        intent.putExtra("Name", bean.getName());
-        intent.putExtra("Remark", bean.getRemark());
-        intent.putExtra("AreaId", bean.getAreaId());
-        intent.putExtra("projectId", projectId);
-        intent.putExtra("itemId", bean.getID());
-        startActivity(intent);
+        mBean = bean;
+
+        final String[] items = {"二维码", "NFC"};
+        AlertDialog dialog = new AlertDialog.Builder(getContext())
+                .setTitle("选择巡检方式")
+                .setSingleChoiceItems(items, select, (dlg, which) -> {
+                    select = which;
+                })
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = null;
+                        switch (select) {
+                            case 0:
+                                intent = new Intent(mContext, InspectionQrCodeActivity.class);
+                                intent.putExtra("taskId", taskId);
+                                intent.putExtra("projectId", projectId);
+                                intent.putExtra("itemId", bean.getID());
+                                startActivityForResult(intent, QRSCAN_CODE);
+                                break;
+                            case 1:
+                                intent = new Intent(mContext, NFCReadActivity.class);
+                                intent.putExtra("taskId", taskId);
+                                intent.putExtra("projectId", projectId);
+                                intent.putExtra("itemId", bean.getID());
+                                startActivityForResult(intent, NFC_CODE);
+                                break;
+                        }
+                    }
+                }).create();
+        dialog.show();
+
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == QRSCAN_CODE) {
+                Intent intent = new Intent(getContext(), InspectionResultSaveActivity.class);
+                intent.putExtra("taskId", taskId);
+                intent.putExtra("Name", mBean.getName());
+                intent.putExtra("Remark", mBean.getRemark());
+                intent.putExtra("AreaId", mBean.getAreaId());
+                intent.putExtra("projectId", projectId);
+                intent.putExtra("itemId", data.getStringExtra("qrscan"));
+                startActivity(intent);
+            } else if (requestCode == NFC_CODE) {
+                Intent intent = new Intent(getContext(), InspectionResultSaveActivity.class);
+                intent.putExtra("taskId", taskId);
+                intent.putExtra("Name", mBean.getName());
+                intent.putExtra("Remark", mBean.getRemark());
+                intent.putExtra("AreaId", mBean.getAreaId());
+                intent.putExtra("projectId", projectId);
+                intent.putExtra("itemId", data.getStringExtra("NFCread"));
+            }
+        }
+
     }
 }

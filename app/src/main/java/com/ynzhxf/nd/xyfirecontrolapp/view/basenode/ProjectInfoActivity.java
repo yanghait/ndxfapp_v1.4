@@ -44,6 +44,7 @@ import com.ynzhxf.nd.xyfirecontrolapp.util.HelperTool;
 import com.ynzhxf.nd.xyfirecontrolapp.view.BaseActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.HelperView;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.FileShareHomeActivity;
+import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.RegDeviceCodeActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.assessment.RiskAssessmentHomeActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.diagnose.DeviceDiagnoseHomeActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.diagnose.DeviceDiagnoseHomeFinishActivity;
@@ -506,6 +507,10 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
                 ImageView mItemEightImage = findViewById(R.id.project_info_table8_img);
                 TextView mItemEightText = findViewById(R.id.project_info_table8_tv);
 
+                LinearLayout mItemEleven = findViewById(R.id.project_info_table11);
+                ImageView mItemElevenImage = findViewById(R.id.project_info_table11_img);
+                TextView mItemElevenText = findViewById(R.id.project_info_table11_tv);
+
                 tableRow3.setVisibility(View.VISIBLE);
                 if (isShow) {
                     menuRealViode6.setVisibility(View.VISIBLE);
@@ -544,7 +549,14 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
                         }
                     });
 
-
+                    mItemElevenImage.setImageDrawable(getResources().getDrawable(R.mipmap.icon_check_reg));
+                    mItemElevenText.setText("标签注册");
+                    mItemEleven.setVisibility(View.VISIBLE);
+                    mItemEleven.setOnClickListener(v -> {
+                        Intent intent = new Intent(ProjectInfoActivity.this, RegDeviceCodeActivity.class);
+                        intent.putExtra("projectId", projectNodeBean.getID());
+                        startActivity(intent);
+                    });
                 } else {
                     menuRealViode6.setVisibility(View.VISIBLE);
 

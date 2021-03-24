@@ -1,6 +1,10 @@
 package com.ynzhxf.nd.xyfirecontrolapp.pars;
 
 
+import android.os.Build;
+
+import com.ynzhxf.nd.xyfirecontrolapp.BuildConfig;
+
 /**
  * 网络请求参数
  * http://www.ynzhxf.com:8181/
@@ -11,8 +15,8 @@ package com.ynzhxf.nd.xyfirecontrolapp.pars;
  */
 
 public class URLConstant {
-//    public static final String URL_BASE1 = "http://fire.jinzhoucloud.com";//http://192.168.50.153
-    public static final String URL_BASE1 = "http://www.ynzhxf.com:8181";
+    //    public static final String URL_BASE1 = "http://fire.jinzhoucloud.com";//http://192.168.50.153
+    public static final String URL_BASE1 = BuildConfig.API_URL;
     public static final String URL_BASE = URL_BASE1 + "/";
 
 
@@ -329,8 +333,14 @@ public class URLConstant {
     // 巡检上传图片
     public static final String URL_INSPECTION_UPLOAD_IMAGE = "/api/FireInspectionApi/CommonApi/Upload";
 
-    // 巡检区域列表
+    // 巡检区域列表巡检项列表
+    public static final String URL_INSPECTION_AREA_POINT_LIST = "/api/FireInspectionApi/EnterpriseApi/GetInspectItemListByInspectAreaId";
+
+    // 巡检区域
     public static final String URL_INSPECTION_AREA_LIST = "/api/FireInspectionApi/EnterpriseApi/GetInspectAreaList";
+
+    //绑定巡检点标签
+    public static final String URL_INSPECTION_POINT_BINDIND= "/api/FireInspectionApi/EnterpriseApi/InspectItemRegister";
 
     // 设置巡检区域负责人
     public static final String URL_INSPECTION_SET_AREA_PERSON = "/api/FireInspectionApi/EnterpriseApi/EditFireInspectArea";
@@ -548,12 +558,10 @@ public class URLConstant {
     public static final String URL_OVERVIEW_MESSAGE_DETAILS = "/CommonApp/GetOverviewMsgDetail";
 
 
-
-
     // 主管部门统计模块 获取实时报警饼图统计数据
-    public static  final String URL_GET_CHARGE_CURRENT_ALARM_PIE_DATA = "api/StatisticsApi/CompetApi/GetAlarmRate";
+    public static final String URL_GET_CHARGE_CURRENT_ALARM_PIE_DATA = "api/StatisticsApi/CompetApi/GetAlarmRate";
     // 主管部门统计模块 首页获取事件数量
-    public static  final String URL_GET_CHARGE_CHARTS_GET_EVENT_DATA = "api/StatisticsApi/CompetApi/GetStatisticIndexData";
+    public static final String URL_GET_CHARGE_CHARTS_GET_EVENT_DATA = "api/StatisticsApi/CompetApi/GetStatisticIndexData";
     // 主管部门统计 历史报警统计图列表数据
     public static final String URL_GET_CHARGE_CHARTS_GET_HISTORY_DATA = "api/StatisticsApi/CompetApi/GetStatisticsHistoryAlarm";
     // 主管部门统计 历史报警项目列表项目详情

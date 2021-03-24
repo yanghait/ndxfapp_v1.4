@@ -44,6 +44,7 @@ public class InspectionQrCodeActivity extends BaseActivity implements ZBarScanne
 
     private String itemId;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_company_qr_code);
@@ -54,20 +55,18 @@ public class InspectionQrCodeActivity extends BaseActivity implements ZBarScanne
         content.addView(mScannerView);
         taskId = getIntent().getStringExtra("taskId");
 
-        Name = getIntent().getStringExtra("Name");
-
-        Remark = getIntent().getStringExtra("Remark");
-
-        AreaId = getIntent().getStringExtra("AreaId");
-
-        projectId = getIntent().getStringExtra("projectId");
-
         itemId = getIntent().getStringExtra("itemId");
     }
 
     @Override
     public void handleResult(Result result) {
-        initInspectionQrResult(result);
+        if (null == taskId) {
+            Intent backintent = getIntent();
+            backintent.putExtra("qrscan", result.getContents());
+            setResult(RESULT_OK, backintent);
+            finish();
+        } else
+            initInspectionQrResult(result);
     }
 
     private void initInspectionQrResult(final Result result) {
@@ -100,15 +99,18 @@ public class InspectionQrCodeActivity extends BaseActivity implements ZBarScanne
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.getBoolean("success")) {
-
-                                Intent intent = new Intent(InspectionQrCodeActivity.this, InspectionResultSaveActivity.class);
-                                intent.putExtra("taskId", taskId);
-                                intent.putExtra("Name", Name);
-                                intent.putExtra("Remark", Remark);
-                                intent.putExtra("AreaId", AreaId);
-                                intent.putExtra("projectId", projectId);
-                                intent.putExtra("itemId", result.getContents());
-                                startActivity(intent);
+                                Intent intent = getIntent();
+                                intent.putExtra("qrscan", result.getContents());
+                                setResult(RESULT_OK, intent);
+                                finish();
+//                                Intent intent = new Intent(InspectionQrCodeActivity.this, InspectionResultSaveActivity.class);
+//                                intent.putExtra("taskId", taskId);
+//                                intent.putExtra("Name", Name);
+//                                intent.putExtra("Remark", Remark);
+//                                intent.putExtra("AreaId", AreaId);
+//                                intent.putExtra("projectId", projectId);
+//                                intent.putExtra("itemId", result.getContents());
+//                                startActivity(intent);
 
                             } else {
                                 finish();

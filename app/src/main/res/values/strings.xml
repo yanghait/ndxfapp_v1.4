@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">贵州云上智慧消防</string>
-    <string name = "login_text_info">云南诺盾消防提供云计算服务</string>
+    <!--    <string name="app_name">贵州云上智慧消防</string>-->
+    <string name="login_text_info">云南诺盾消防提供云计算服务</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
