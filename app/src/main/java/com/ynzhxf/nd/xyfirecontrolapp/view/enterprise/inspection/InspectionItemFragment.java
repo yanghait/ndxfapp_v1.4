@@ -293,16 +293,12 @@ public class InspectionItemFragment extends BaseFragment {
                         switch (select) {
                             case 0:
                                 intent = new Intent(mContext, InspectionQrCodeActivity.class);
-                                intent.putExtra("taskId", taskId);
-                                intent.putExtra("projectId", projectId);
-                                intent.putExtra("itemId", bean.getID());
+                                intent.putExtra("inspectionItem", bean);
                                 startActivityForResult(intent, QRSCAN_CODE);
                                 break;
                             case 1:
                                 intent = new Intent(mContext, NFCReadActivity.class);
-                                intent.putExtra("taskId", taskId);
-                                intent.putExtra("projectId", projectId);
-                                intent.putExtra("itemId", bean.getID());
+                                intent.putExtra("inspectionItem", bean);
                                 startActivityForResult(intent, NFC_CODE);
                                 break;
                         }
@@ -334,6 +330,7 @@ public class InspectionItemFragment extends BaseFragment {
                 intent.putExtra("AreaId", mBean.getAreaId());
                 intent.putExtra("projectId", projectId);
                 intent.putExtra("itemId", data.getStringExtra("NFCread"));
+                startActivity(intent);
             }
         }
 

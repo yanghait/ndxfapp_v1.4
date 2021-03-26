@@ -37,6 +37,7 @@ public class InspectionItemListBean extends BaseNodeBean {
     private String StateShow;
     private String OverTimeShow;
     private String Remark;
+    private String QrCode;
 
     public String getProjectId() {
         return ProjectId;
@@ -140,5 +141,13 @@ public class InspectionItemListBean extends BaseNodeBean {
 
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    public String getQrCode() {
+        return QrCode;
+    }
+
+    public void setQrCode(String qrCode) {
+        QrCode = qrCode;
     }
 }

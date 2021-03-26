@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.ynzhxf.nd.xyfirecontrolapp.R;
+import com.ynzhxf.nd.xyfirecontrolapp.bean.inspection.InspectionItemListBean;
 import com.ynzhxf.nd.xyfirecontrolapp.pars.URLConstant;
 import com.ynzhxf.nd.xyfirecontrolapp.util.HelperTool;
 import com.ynzhxf.nd.xyfirecontrolapp.util.LogUtils;
@@ -43,10 +44,7 @@ public class NFCReadActivity extends BaseActivity {
     private IntentFilter[] intentFiltersArray;
     private String[][] techListsArray;
 
-
-    private String taskId;
-
-    private String itemId;
+    private InspectionItemListBean inspectionItemListBean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +53,8 @@ public class NFCReadActivity extends BaseActivity {
         setBarTitle("NFC扫描");
         initNFC();
         resolveIntent(getIntent());
-        taskId = getIntent().getStringExtra("taskId");
-
-        itemId = getIntent().getStringExtra("itemId");
+        if (getIntent().hasExtra("inspectionItem"))
+            inspectionItemListBean = (InspectionItemListBean) getIntent().getSerializableExtra("inspectionItem");
     }
 
     private void initNFC() {
@@ -102,7 +99,7 @@ public class NFCReadActivity extends BaseActivity {
             String nfcId = dumpTagData(tag);
             if (!nfcId.isEmpty()) {
                 Log.i(TAG, "卡的内容" + nfcId);
-                if (null == taskId) {
+                if (null == inspectionItemListBean) {
                     Intent backintent = getIntent();
                     backintent.putExtra("NFCread", nfcId);
                     setResult(RESULT_OK, backintent);
@@ -118,15 +115,25 @@ public class NFCReadActivity extends BaseActivity {
 
     private void initInspectionQrResult(String result) {
 
-        if (StringUtils.isEmpty(itemId) || !itemId.equals(result)) {
-            ToastUtils.showLong("NFC信息与巡检项不匹配!");
-            finish();
-            return;
+        if (inspectionItemListBean.getQrCode() != null) {
+            if (!inspectionItemListBean.getQrCode().equals(result)) {
+                ToastUtils.showLong("NFC标签与巡检项不匹配!");
+                finish();
+                return;
+            }
+        } else {
+            if (!inspectionItemListBean.getID().equals(result)) {
+                ToastUtils.showLong("NFC标签与巡检项不匹配!");
+                finish();
+                return;
+            }
         }
+
         Map<String, String> params = new HashMap<>();
         params.put("Token", HelperTool.getToken());
-        params.put("taskId", taskId);
-        params.put("itemId", result);
+        params.put("taskId", inspectionItemListBean.getTaskId());
+        params.put("itemId", inspectionItemListBean.getID());
+        params.put("qrCode", result);
         final ProgressDialog progressDialog = showProgress(this, "加载中...", false);
         OkHttpUtils.post()
                 .url(URLConstant.URL_BASE1 + URLConstant.URL_INSPECTION_QR_CODE_VERIFY)

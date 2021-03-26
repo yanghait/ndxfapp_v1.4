@@ -77,7 +77,6 @@ public class RegDeviceCodeActivity extends BaseActivity {
         reg_NFCCode_txt = this.findViewById(R.id.reg_NFCCode_txt);
 
         reg_qrcode_btn = this.findViewById(R.id.reg_qrcode_btn);
-        local_btn = this.findViewById(R.id.local_btn);
     }
 
     private void initListener() {
