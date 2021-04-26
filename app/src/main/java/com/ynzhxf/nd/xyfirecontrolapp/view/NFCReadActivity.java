@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import me.dm7.barcodescanner.zbar.Result;
+
 import okhttp3.Call;
 
 public class NFCReadActivity extends BaseActivity {

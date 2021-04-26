@@ -32,7 +32,7 @@ android {
             buildConfigField "String", "API_URL", '"http://121.4.222.2:8080"'
             manifestPlaceholders = [
                     JPUSH_PKGNAME: applicationId,
-                    JPUSH_APPKEY : "ce408457907fa7693aedfb3f",//值来自开发者平台取得的AppKey
+                    JPUSH_APPKEY : "f3ba3d9edb08f3d6a3103d05",//值来自开发者平台取得的AppKey
                     JPUSH_CHANNEL: "default_developer",
             ]
         }
@@ -155,6 +155,7 @@ dependencies {
     api('me.dm7.barcodescanner:zbar:1.9.8') {
         exclude group: 'com.android.support'
     }
+
 
     // 权限申请
     api('pub.devrel:easypermissions:2.0.0') {

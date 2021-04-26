@@ -2,7 +2,9 @@ package com.ynzhxf.nd.xyfirecontrolapp.bean.inspection;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CheckPointBean {
+import java.io.Serializable;
+
+public class CheckPointBean implements Serializable {
     @SerializedName("Name")
     String Name = "";
     @SerializedName("InspectItemTypes")
@@ -38,5 +40,9 @@ public class CheckPointBean {
 
     public String getQrCode() {
         return QrCode;
+    }
+
+    public void setQrCode(String qrCode) {
+        QrCode = qrCode;
     }
 }

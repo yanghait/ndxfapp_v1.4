@@ -320,7 +320,7 @@ public class InspectionItemFragment extends BaseFragment {
                 intent.putExtra("Remark", mBean.getRemark());
                 intent.putExtra("AreaId", mBean.getAreaId());
                 intent.putExtra("projectId", projectId);
-                intent.putExtra("itemId", data.getStringExtra("qrscan"));
+                intent.putExtra("itemId", mBean.getID());
                 startActivity(intent);
             } else if (requestCode == NFC_CODE) {
                 Intent intent = new Intent(getContext(), InspectionResultSaveActivity.class);
@@ -329,7 +329,7 @@ public class InspectionItemFragment extends BaseFragment {
                 intent.putExtra("Remark", mBean.getRemark());
                 intent.putExtra("AreaId", mBean.getAreaId());
                 intent.putExtra("projectId", projectId);
-                intent.putExtra("itemId", data.getStringExtra("NFCread"));
+                intent.putExtra("itemId", mBean.getID());
                 startActivity(intent);
             }
         }

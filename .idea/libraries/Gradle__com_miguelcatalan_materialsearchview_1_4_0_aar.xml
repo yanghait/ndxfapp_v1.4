@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7dbebabbffe882c30d3e6b3c3ed36064/jetified-materialsearchview-1.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7dbebabbffe882c30d3e6b3c3ed36064/jetified-materialsearchview-1.4.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7dbebabbffe882c30d3e6b3c3ed36064/jetified-materialsearchview-1.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d72697a1743e3cba936fa61886954b6/jetified-materialsearchview-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d72697a1743e3cba936fa61886954b6/jetified-materialsearchview-1.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d72697a1743e3cba936fa61886954b6/jetified-materialsearchview-1.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miguelcatalan/materialsearchview/1.4.0/5c5fc650f148e263a439aba7cdff200437b89890/materialsearchview-1.4.0-javadoc.jar!/" />

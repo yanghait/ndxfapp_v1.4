@@ -66,12 +66,12 @@ public class InspectionQrCodeActivity extends BaseActivity implements ZBarScanne
                 finish();
                 return;
             }
-        } else {
-            if (!inspectionItemListBean.getID().equals(result.getContents())) {
-                ToastUtils.showLong("二维码与巡检项不匹配!");
-                finish();
-                return;
-            }
+        }else{
+        if (!inspectionItemListBean.getID().equals(result.getContents())) {
+            ToastUtils.showLong("二维码与巡检项不匹配!");
+            finish();
+            return;
+        }
         }
 
 

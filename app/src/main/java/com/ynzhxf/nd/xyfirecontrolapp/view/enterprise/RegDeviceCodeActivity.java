@@ -5,24 +5,19 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.baidu.location.BDLocation;
-import com.baidu.location.BDLocationListener;
-import com.baidu.location.LocationClient;
-import com.baidu.location.LocationClientOption;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.ynzhxf.nd.xyfirecontrolapp.R;
+import com.ynzhxf.nd.xyfirecontrolapp.adapter.CheckInfoAdapter;
 import com.ynzhxf.nd.xyfirecontrolapp.bean.inspection.CheckPointBean;
 import com.ynzhxf.nd.xyfirecontrolapp.bean.inspection.InspectionAreaListBackBean;
 import com.ynzhxf.nd.xyfirecontrolapp.pars.URLConstant;
@@ -45,11 +40,11 @@ import okhttp3.Call;
 
 public class RegDeviceCodeActivity extends BaseActivity {
 
-    Spinner region_spinner, fcSys_spinner;
+    Spinner region_spinner;
 
-    TextView reg_NFCCode_txt;
+    RecyclerView checkInfo_recycler;
 
-    Button reg_qrcode_btn, local_btn;
+    CheckInfoAdapter checkInfoAdapter;
 
     String projectId = "", regionId = "", checkPonitId = "";
 
@@ -72,16 +67,15 @@ public class RegDeviceCodeActivity extends BaseActivity {
 
     private void initLayout() {
         region_spinner = this.findViewById(R.id.region_spinner);
-        fcSys_spinner = this.findViewById(R.id.fcSys_spinner);
+        checkInfo_recycler = this.findViewById(R.id.checkInfo_recycler);
+        checkInfoAdapter = new CheckInfoAdapter(this);
+        checkInfo_recycler.setLayoutManager(new LinearLayoutManager(this));
+        checkInfo_recycler.setAdapter(checkInfoAdapter);
 
-        reg_NFCCode_txt = this.findViewById(R.id.reg_NFCCode_txt);
-
-        reg_qrcode_btn = this.findViewById(R.id.reg_qrcode_btn);
     }
 
     private void initListener() {
-
-        reg_NFCCode_txt.setOnClickListener(v -> {
+        checkInfoAdapter.setOnStateBtnClickListener((position, checkPointInfo) -> {
             select = 0;
             final String[] items = {"二维码", "NFC"};
             AlertDialog dialog = new AlertDialog.Builder(this)
@@ -96,10 +90,14 @@ public class RegDeviceCodeActivity extends BaseActivity {
                             switch (select) {
                                 case 0:
                                     intent = new Intent(RegDeviceCodeActivity.this, InspectionQrCodeActivity.class);
+                                    intent.putExtra("index", position);
+                                    intent.putExtra("checkPoint", checkPointInfo);
                                     startActivityForResult(intent, QRSCAN_CODE);
                                     break;
                                 case 1:
                                     intent = new Intent(RegDeviceCodeActivity.this, NFCReadActivity.class);
+                                    intent.putExtra("index", position);
+                                    intent.putExtra("checkPoint", checkPointInfo);
                                     startActivityForResult(intent, NFC_CODE);
                                     break;
                             }
@@ -108,13 +106,13 @@ public class RegDeviceCodeActivity extends BaseActivity {
             dialog.show();
         });
 
-        reg_qrcode_btn.setOnClickListener(v -> {
-            if (TextUtils.isEmpty(reg_NFCCode_txt.getText())) {
-                HelperView.Toast(RegDeviceCodeActivity.this, "请先扫描二维码或NFC");
-            } else {
-                bindCheckPointCode(reg_NFCCode_txt.getText().toString());
-            }
-        });
+//        reg_qrcode_btn.setOnClickListener(v -> {
+//            if (TextUtils.isEmpty(reg_NFCCode_txt.getText())) {
+//                HelperView.Toast(RegDeviceCodeActivity.this, "请先扫描二维码或NFC");
+//            } else {
+//                bindCheckPointCode(reg_NFCCode_txt.getText().toString());
+//            }
+//        });
     }
 
 
@@ -142,27 +140,6 @@ public class RegDeviceCodeActivity extends BaseActivity {
 
     }
 
-    //巡检点选项
-    private void updatePointSpinner(List<CheckPointBean> checkPointBeans) {
-        List<String> ponitNameList = new ArrayList<>();
-        for (CheckPointBean checkPointBean : checkPointBeans) {
-            ponitNameList.add(checkPointBean.getName());
-        }
-        ArrayAdapter<String> sysAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ponitNameList);
-        sysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        fcSys_spinner.setAdapter(sysAdapter);
-        fcSys_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                checkPonitId = checkPointBeans.get(i).getID();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-    }
 
     //获取巡检区域
     private void getRegionInfo() {
@@ -226,7 +203,7 @@ public class RegDeviceCodeActivity extends BaseActivity {
                             if (jsonObject.getBoolean("success")) {
                                 List<CheckPointBean> checkPointBeans = new Gson().fromJson(jsonObject.getString("data"), new TypeToken<List<CheckPointBean>>() {
                                 }.getType());
-                                updatePointSpinner(checkPointBeans);
+                                checkInfoAdapter.update(checkPointBeans);
                             } else {
                                 HelperView.Toast(RegDeviceCodeActivity.this, jsonObject.getString("message"));
                             }
@@ -239,10 +216,10 @@ public class RegDeviceCodeActivity extends BaseActivity {
     }
 
     //绑定巡检点标签
-    private void bindCheckPointCode(String qrCode) {
+    private void bindCheckPointCode(CheckPointBean checkPointBean, int index, String qrCode) {
         HashMap<String, String> params = new HashMap<>();
         params.put("Token", HelperTool.getToken());
-        params.put("inspectItemId", checkPonitId);
+        params.put("inspectItemId", checkPointBean.getID());
         params.put("qrCode", qrCode);
         final ProgressDialog progressDialog = showProgress(this, "加载中...", false);
         OkHttpUtils.post()
@@ -263,7 +240,8 @@ public class RegDeviceCodeActivity extends BaseActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.getBoolean("success")) {
                                 HelperView.Toast(RegDeviceCodeActivity.this, "注册成功!");
-                                reg_NFCCode_txt.setText("");
+                                checkPointBean.setQrCode(qrCode);
+                                checkInfoAdapter.updateItem(index, checkPointBean);
                             } else {
                                 HelperView.Toast(RegDeviceCodeActivity.this, jsonObject.getString("message"));
                             }
@@ -281,9 +259,15 @@ public class RegDeviceCodeActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == QRSCAN_CODE) {
-                reg_NFCCode_txt.setText(data.getStringExtra("qrscan"));
+                CheckPointBean bean = (CheckPointBean) data.getSerializableExtra("checkPoint");
+                int index = data.getIntExtra("index", 0);
+                String qrCode = data.getStringExtra("qrscan");
+                bindCheckPointCode(bean, index, qrCode);
             } else if (requestCode == NFC_CODE) {
-                reg_NFCCode_txt.setText(data.getStringExtra("NFCread"));
+                CheckPointBean bean = (CheckPointBean) data.getSerializableExtra("checkPoint");
+                int index = data.getIntExtra("index", 0);
+                String nfcCode = data.getStringExtra("NFCread");
+                bindCheckPointCode(bean, index, nfcCode);
             }
         }
 

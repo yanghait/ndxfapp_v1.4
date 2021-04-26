@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/968ca8ff7b6f40d3ebf4e213bf7e15c3/jetified-snake-0.3.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/968ca8ff7b6f40d3ebf4e213bf7e15c3/jetified-snake-0.3.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/968ca8ff7b6f40d3ebf4e213bf7e15c3/jetified-snake-0.3.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82d88f2ad2e726c2602771cc3dfe7289/jetified-snake-0.3.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82d88f2ad2e726c2602771cc3dfe7289/jetified-snake-0.3.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82d88f2ad2e726c2602771cc3dfe7289/jetified-snake-0.3.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.youngfeng.android/snake/0.3.2/d2567470c732db8c72ac9934b5668a86bad47242/snake-0.3.2-javadoc.jar!/" />
