@@ -268,9 +268,7 @@ public class LoginActivity extends BaseActivity implements ILoginPersenter.ILogi
                     default:
                         finish();
                 }
-                Set<String> queryset = new HashSet<String>();
-                queryset.add(resultBean.getData().getUserName());
-                JPushInterface.addTags(this, 1, queryset);
+                JPushInterface.setAlias(this, 1, resultBean.getData().getUserName());
                 if (isFromPush) {
                     intent = new Intent(this, AlarmMessageListActivity.class);
                     intent.putExtra("TypeId", typeId);

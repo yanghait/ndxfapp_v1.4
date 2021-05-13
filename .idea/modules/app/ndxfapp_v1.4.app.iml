@@ -156,5 +156,6 @@
     <orderEntry type="library" name="Gradle: com.youth.banner:banner:1.4.10@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.dinuscxj:circleprogressbar:1.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.tc.seekbar:library:0.2.2@aar" level="project" />
   </component>
 </module>

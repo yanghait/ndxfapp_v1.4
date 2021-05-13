@@ -70,8 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/project_info_diagnose_layout"
@@ -98,18 +97,18 @@
 
 
                         <LinearLayout
-                            android:layout_below="@+id/project_info_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="5dp"
-                            android:orientation="horizontal">
+                            android:layout_below="@+id/project_info_name"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp">
 
                             <ImageView
-                                android:layout_marginLeft="4dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
                                 android:layout_marginTop="3dp"
-                                android:src="@drawable/location_diagnose"/>
+                                android:src="@drawable/location_diagnose" />
 
                             <TextView
                                 android:id="@+id/orgName"
@@ -184,36 +183,38 @@
 
                         <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:orientation="vertical">
+
                             <TextView
                                 android:id="@+id/project_info_diagnose_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:text="设施设备状态良好"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_16sp"
-                                android:textStyle="bold"
-                                android:text="设施设备状态良好"/>
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/project_diagnose_normal_text_color"
-                                android:textSize="@dimen/_12sp"
                                 android:layout_marginTop="6dp"
-                                android:text="上次诊断时间"/>
+                                android:text="上次诊断时间"
+                                android:textColor="@color/project_diagnose_normal_text_color"
+                                android:textSize="@dimen/_12sp" />
+
                             <TextView
                                 android:id="@+id/project_info_diagnose_time"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/project_diagnose_normal_text_color"
-                                android:textSize="@dimen/_12sp"
                                 android:layout_marginTop="1dp"
-                                android:text="2019-04-15 12:12:12"/>
+                                android:text="2019-04-15 12:12:12"
+                                android:textColor="@color/project_diagnose_normal_text_color"
+                                android:textSize="@dimen/_12sp" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -224,98 +225,96 @@
 
                                 <Button
                                     android:id="@+id/project_info_diagnose_detail"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="30dp"
-                                    android:text="查看详情"
-                                    android:visibility="invisible"
                                     style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
                                     android:background="@drawable/project_status_btn_one"
-                                    android:textSize="@dimen/_12sp"
+                                    android:text="查看详情"
                                     android:textColor="@color/white"
-                                    />
+                                    android:textSize="@dimen/_12sp"
+                                    android:visibility="invisible" />
+
                                 <Button
                                     android:id="@+id/project_info_diagnose_start"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     style="?android:attr/borderlessButtonStyle"
-                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="0dp"
                                     android:layout_height="30dp"
-                                    android:textColor="@color/device_diagnose_green"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
                                     android:background="@drawable/project_status_btn_start"
-                                    android:textSize="@dimen/_12sp"
                                     android:text="开始诊断"
-                                    />
+                                    android:textColor="@color/device_diagnose_green"
+                                    android:textSize="@dimen/_12sp" />
 
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginRight="10dp"
-                        android:orientation="vertical">
-
-                        <me.itangqi.waveloadingview.WaveLoadingView
-                            android:id="@+id/waveLoadingView"
-                            android:layout_width="140dp"
-                            android:layout_height="140dp"
-                            android:layout_centerInParent="true"
-                            app:wlv_borderColor="@color/device_diagnose_green"
-                            app:wlv_borderWidth="3dp"
-                            app:wlv_progressValue="70"
-                            app:wlv_round_rectangle="true"
-                            app:wlv_shapeType="circle"
-                            app:wlv_titleCenter=""
-                            app:wlv_titleCenterColor="@color/device_diagnose_green"
-                            app:wlv_titleCenterSize="30sp"
-                            app:wlv_triangle_direction="north"
-                            app:wlv_waveAmplitude="70"
-                            app:wlv_waveColor="@android:color/white" />
-
-                        <ImageView
-                            android:id="@+id/cir_rotate"
-                            android:layout_width="155dp"
-                            android:layout_height="155dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/cir_rate" />
-
-                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_centerInParent="true"
-                            android:orientation="horizontal">
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/diagnose_text_score"
+                            <me.itangqi.waveloadingview.WaveLoadingView
+                                android:id="@+id/waveLoadingView"
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:layout_centerInParent="true"
+                                app:wlv_borderColor="@color/device_diagnose_green"
+                                app:wlv_borderWidth="3dp"
+                                app:wlv_progressValue="70"
+                                app:wlv_round_rectangle="true"
+                                app:wlv_shapeType="circle"
+                                app:wlv_titleCenter=""
+                                app:wlv_titleCenterColor="@color/device_diagnose_green"
+                                app:wlv_titleCenterSize="30sp"
+                                app:wlv_triangle_direction="north"
+                                app:wlv_waveAmplitude="70"
+                                app:wlv_waveColor="@android:color/white" />
+
+                            <ImageView
+                                android:id="@+id/cir_rotate"
+                                android:layout_width="155dp"
+                                android:layout_height="155dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/cir_rate" />
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_alignRight="@+id/cir_rotate"
-                                android:textColor="@color/device_diagnose_green"
-                                android:textSize="40sp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="3dp"
-                                android:text="100"/>
+                                android:layout_centerInParent="true"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/diagnose_text_score_one"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_alignRight="@+id/cir_rotate"
-                                android:textColor="@color/device_diagnose_green"
-                                android:textSize="@dimen/_17sp"
-                                android:text=" 分"/>
-                        </LinearLayout>
+                                <TextView
+                                    android:id="@+id/diagnose_text_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignRight="@+id/cir_rotate"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="3dp"
+                                    android:text="100"
+                                    android:textColor="@color/device_diagnose_green"
+                                    android:textSize="40sp"
+                                    android:textStyle="bold" />
 
-                    </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/diagnose_text_score_one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignRight="@+id/cir_rotate"
+                                    android:layout_centerVertical="true"
+                                    android:text=" 分"
+                                    android:textColor="@color/device_diagnose_green"
+                                    android:textSize="@dimen/_17sp" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
                     </LinearLayout>
-
 
 
                     <!--<LinearLayout
@@ -370,7 +369,6 @@
                     </LinearLayout>-->
 
 
-
                     <LinearLayout
                         android:id="@+id/menu_count"
                         android:layout_width="match_parent"
@@ -408,8 +406,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingTop="5dp"
-                    android:paddingBottom="4dp"
-                    >
+                    android:paddingBottom="4dp">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -441,9 +438,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="正常"
-                                android:textStyle="bold"
                                 android:textColor="@color/device_diagnose_green"
-                                android:textSize="18sp" />
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -485,9 +482,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
-                                android:textStyle="bold"
                                 android:textColor="@color/black"
-                                android:textSize="20sp" />
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -530,9 +527,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="正常"
-                                android:textStyle="bold"
                                 android:textColor="@color/device_diagnose_green"
-                                android:textSize="18sp" />
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -545,6 +542,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
@@ -788,7 +786,6 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -904,8 +901,8 @@
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/menu_img_seletor"
                                 android:gravity="center"
-                                android:visibility="invisible"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:visibility="invisible">
 
                                 <ImageView
                                     android:id="@+id/project_info_table10_img"
@@ -937,8 +934,8 @@
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/menu_img_seletor"
                                 android:gravity="center"
-                                android:visibility="invisible"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:visibility="invisible">
 
                                 <ImageView
                                     android:id="@+id/project_info_table11_img"
@@ -958,6 +955,31 @@
 
                         </LinearLayout>
 
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/project_info_simola"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/menu_img_seletor"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/menu_img"
+                                android:layout_height="@dimen/menu_img"
+                                android:src="@drawable/project_statistics_one" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="消防系统"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
                     </TableRow>
                 </TableLayout>
 

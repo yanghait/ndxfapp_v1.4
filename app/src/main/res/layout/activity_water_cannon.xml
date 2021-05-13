@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E7BFC"
+    android:orientation="vertical"
+    tools:context=".view.basenode.cannon.WaterCannonActivity">
+
+    <include layout="@layout/app_title_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/water_cannon_control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/middle_control_layout"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="水炮当前水平位置"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+
+                        <TextView
+                            android:id="@+id/water_cannon_horizontal_txt"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#70E8B0"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+                    <com.ynzhxf.nd.xyfirecontrolapp.widget.HorizontalCirScaleView
+                        android:id="@+id/water_cannon_horizontalView"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        app:color="#ffffff"
+                        app:scale_height="10dp"
+                        app:scale_num="96"
+                        app:scale_width="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/middle_control_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cannon_up_btn"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_cannon_up" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/cannon_left_btn"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/icon_cannon_left" />
+
+                        <ImageView
+                            android:id="@+id/cannon_down_btn"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/icon_cannon_down" />
+
+
+                        <ImageView
+                            android:id="@+id/cannon_right_btn"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@mipmap/icon_cannon_right" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/middle_control_layout"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="水炮当前仰角位置"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+
+                        <TextView
+                            android:id="@+id/water_cannon_vertical_txt"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#70E8B0"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+
+                    <com.ynzhxf.nd.xyfirecontrolapp.widget.VerticalCirScaleView
+                        android:id="@+id/water_cannon_verticalView"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        app:color="#ffffff"
+                        app:scale_height="15dp"
+                        app:scale_num="24"
+                        app:scale_width="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/middle_control_layout"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/water_state_rg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/water_column_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:text="水柱"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+
+                        <RadioButton
+                            android:id="@+id/water_mist_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:text="水雾"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sp" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/water_valveState_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/water_valveState_img"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/icon_open_btn" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开启水阀"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/water_reset_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:src="@mipmap/icon_cannon_reset" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="水炮复位"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/water_cannonState_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@mipmap/icon_close_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关闭水炮"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/water_cannon_OC_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <com.ynzhxf.nd.xyfirecontrolapp.widget.WaterCannonOCView
+                android:id="@+id/waterCannonOCView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <TextView
+                android:id="@+id/waterCannonOC_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="伪装关闭中"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp" />
+
+            <LinearLayout
+                android:id="@+id/water_cannon_open_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/icon_open_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开启伪装"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

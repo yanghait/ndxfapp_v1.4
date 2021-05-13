@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tc.seekbar:library:0.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac37587a87dae7a3eb617de34e98bfb/jetified-library-0.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac37587a87dae7a3eb617de34e98bfb/jetified-library-0.2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac37587a87dae7a3eb617de34e98bfb/jetified-library-0.2.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tc.seekbar/library/0.2.2/a6c64387ebaa7f4294f257281bbf719d5a73cd64/library-0.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tc.seekbar/library/0.2.2/2882e1217a57d075d5143eeb726ddb9d46f2aebf/library-0.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

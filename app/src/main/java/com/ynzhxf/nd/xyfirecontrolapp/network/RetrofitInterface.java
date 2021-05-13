@@ -34,12 +34,17 @@ import com.ynzhxf.nd.xyfirecontrolapp.bean.platform.LoginInfoBean;
 import com.ynzhxf.nd.xyfirecontrolapp.bean.share.FileShareFileTypeBean;
 import com.ynzhxf.nd.xyfirecontrolapp.bean.share.FileShareMyFileBean;
 import com.ynzhxf.nd.xyfirecontrolapp.pars.URLConstant;
+import com.ynzhxf.nd.xyfirecontrolapp.view.basenode.cannon.bean.SmartPowerInfo;
+import com.ynzhxf.nd.xyfirecontrolapp.view.basenode.cannon.bean.SmlSystemInfo;
+import com.ynzhxf.nd.xyfirecontrolapp.view.basenode.cannon.bean.WaterCannonInfo;
 
 import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Observable;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -75,6 +80,7 @@ public interface RetrofitInterface {
      */
     @POST(URLConstant.URL_LOGIN)
     Observable<ResultBean<LoginInfoBean, Map<String, String>>> login(@Query("DeviceUUID") String DeviceUUID, @Query("DevicePlatform") String DevicePlatform, @Query("UserName") String UserName, @Query("UserPwd") String UserPwd, @Query("Key") String key, @Query("Code") String Code);
+
 
     /**
      * 检测Token是否有效
@@ -283,6 +289,57 @@ public interface RetrofitInterface {
     @POST(URLConstant.URL_EQUIPMENT_LABEL)
     Observable<ResultBean<List<TreeGridBean<LabelNodeBean>>, String>> getAppGetEquipmentAndLabel(@Query("Token") String token, @Query("proSysID") String proSysID);
 
+
+    /**
+     * 司莫拉登录
+     *
+     * @param params
+     * @return
+     */
+    @POST(URLConstant.URL_LOGIN)
+    Observable<ResultBean<LoginInfoBean, Map<String, String>>> loginToSimola(@Body RequestBody params);
+
+    /**
+     * 司莫拉登录
+     *
+     * @param params
+     * @return
+     */
+    @POST("CommonApp/GetProjectRealStateState")
+    Observable<ResultBean<List<SmlSystemInfo>, String>> getSmlSys(@Body RequestBody params);
+
+    /**
+     * 司莫拉根据系统TYPID获取标签
+     */
+    @POST("CommonApp/AppGetEquipmentList")
+    Observable<ResultBean<List<WaterCannonInfo>, String>> getAppGetEquipmentSimola(@Body RequestBody body);
+
+
+    /**
+     * 操作水炮
+     */
+    @POST("WaterCannon/WaterCannonOperation")
+    Observable<ResultBean> setWaterCannonCmd(@Body RequestBody body);
+
+    /**
+     * 操作水炮
+     */
+    @POST("CommonApp/GetEquipmentStatus")
+    Observable<ResultBean> getWaterCannonData(@Body RequestBody body);
+
+
+    /**
+     * 获取智慧用电开关列表
+     */
+    @POST("CommonApp/ProjectSystemRealDataSimola")
+    Observable<ResultBean<List<SmartPowerInfo>, String>> getSmartPowerList(@Query("Token") String token, @Query("proSysID") String proSysID);
+
+    /**
+     * 设置智慧用电开关
+     */
+    @POST("CommonApp/AppWriteValue")
+    Observable<ResultBean> setSmartPowerStauts(@Query("labelID") String labelID, @Query("pwd") String pwd, @Query("Token") String token);
+
     /**
      * 标签写值安全验证操作接口
      *
@@ -293,6 +350,7 @@ public interface RetrofitInterface {
      */
     @POST(URLConstant.URL_LABEL_CONTROL)
     Observable<ResultBean<String, String>> settingLabelWriteValue(@Query("Token") String token, @Query("labelID") String labelID, @Query("confirmPwd") String confirmPwd);
+
 
     /**
      * 获取标签的历史数据记录
@@ -384,7 +442,7 @@ public interface RetrofitInterface {
     Observable<ResultBean<String, String>> addNewsReadCountAndURL(@Query("Token") String token, @Query("ID") String newsId);
 
     @GET(URLConstant.URL_NEWS_LIST)
-    Observable<ResultBean<String,String>> addNewsReadCountAndUrl(@Query("Token") String token,@Query("ID") String newsId);
+    Observable<ResultBean<String, String>> addNewsReadCountAndUrl(@Query("Token") String token, @Query("ID") String newsId);
 
 
     //========================================消息==========================================================

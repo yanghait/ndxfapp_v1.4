@@ -24,6 +24,7 @@ public class HttpUtils {
             writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).build();
     private static HttpUtils httpUtils;
     private static Retrofit retrofit;
+    private static Retrofit testRetrofit;
     private static RetrofitInterface retrofitInterface;
 
     public synchronized static RetrofitInterface getRetrofit() {
@@ -36,6 +37,20 @@ public class HttpUtils {
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
             retrofitInterface = retrofit.create(RetrofitInterface.class);
+        }
+        return retrofitInterface;
+    }
+
+    public synchronized static RetrofitInterface getRetrofit(String baseUrl) {
+        //初始化retrofit的配置
+        if (testRetrofit == null) {
+            testRetrofit = new Retrofit.Builder()
+                    .baseUrl(baseUrl)
+                    .client(initOkHttp())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build();
+            retrofitInterface = testRetrofit.create(RetrofitInterface.class);
         }
         return retrofitInterface;
     }

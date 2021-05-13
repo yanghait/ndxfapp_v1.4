@@ -390,8 +390,8 @@ public class VideoPlayActivity extends BaseActivity implements IVideoPlayPersent
     public void callBackVideoPlay(ResultBean<String, String> result) {
 
         if (result.isSuccess()) {
-            videoPath = result.getData();
 
+            videoPath = result.getData();
             if (StringUtils.isEmpty(videoPath)) {
                 progressDialog.dismiss();
                 ToastUtils.showLong("未发现视频流!");

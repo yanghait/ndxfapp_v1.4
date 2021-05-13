@@ -54,6 +54,23 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <declare-styleable name="CirScaleView">
+        <attr name="color" format="color" />
+        <attr name="scale_width" format="dimension" />
+        <attr name="scale_height" format="dimension" />
+        <attr name="scale_num" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="WaterCannonOCView">
+        <attr name="startAngle" format="integer" />
+    </declare-styleable>
+
+    <style name="CustomRadioTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selectbox</item>
+    </style>
+
+
+
     <!--<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/launcher_icon</item>
         <item name="android:windowFullscreen">true</item>

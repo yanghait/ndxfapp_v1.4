@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -43,6 +44,7 @@ import com.ynzhxf.nd.xyfirecontrolapp.presenter.nodebase.impl.NodeBasePersenterF
 import com.ynzhxf.nd.xyfirecontrolapp.util.HelperTool;
 import com.ynzhxf.nd.xyfirecontrolapp.view.BaseActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.HelperView;
+import com.ynzhxf.nd.xyfirecontrolapp.view.basenode.cannon.SmlSystemListActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.FileShareHomeActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.RegDeviceCodeActivity;
 import com.ynzhxf.nd.xyfirecontrolapp.view.enterprise.assessment.RiskAssessmentHomeActivity;
@@ -149,6 +151,8 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
     public View menuFileShare8;
     // 项目名
     public TextView projectNameInfo;
+    //司莫拉系统
+    public LinearLayout project_info_simola;
 
     // 消防接管
     private TextView fire_fighting;
@@ -204,6 +208,8 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
         menuFileShare8 = findViewById(R.id.project_info_table5);
         txtOrgName = findViewById(R.id.orgName);
         projectNameInfo = findViewById(R.id.project_info_name);
+        project_info_simola = findViewById(R.id.project_info_simola);
+
         refreshLayout = (SmartRefreshLayout) findViewById(R.id.refreshLayout);
         txtProjectState = findViewById(R.id.project_info_message);
         mMessageState = findViewById(R.id.message_state);
@@ -584,6 +590,16 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
                             startActivity(intent);
                         }
                     });
+
+                    mItemTenImage.setImageDrawable(getResources().getDrawable(R.mipmap.icon_check_reg));
+                    mItemTenText.setText("标签注册");
+                    mItemTen.setVisibility(View.VISIBLE);
+                    mItemTen.setOnClickListener(v -> {
+                        Intent intent = new Intent(ProjectInfoActivity.this, RegDeviceCodeActivity.class);
+                        intent.putExtra("projectId", projectNodeBean.getID());
+                        startActivity(intent);
+                    });
+
                 }
             }
         });
@@ -830,6 +846,11 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
                 startActivity(intent);
             }
         });
+
+        project_info_simola.setOnClickListener(v -> {
+            Intent intent = new Intent(ProjectInfoActivity.this, SmlSystemListActivity.class);
+            startActivity(intent);
+        });
     }
 
     /**
@@ -953,6 +974,14 @@ public class ProjectInfoActivity extends BaseActivity implements IProjectEventCo
         }
         if (!StringUtils.isEmpty(result.get("equipmentTotal"))) {
             projectInfoCount.setText(result.get("equipmentTotal"));
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+        } else {
         }
     }
 }

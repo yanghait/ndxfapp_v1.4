@@ -45,6 +45,9 @@
 
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.NFC" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
 
     <uses-feature
         android:name="android.hardware.nfc"
@@ -59,7 +62,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.enterprise.RegDeviceCodeActivity"></activity>
+        <activity android:name=".view.basenode.cannon.SmlVideoListActivity">
+
+        </activity>
+        <activity android:name=".view.basenode.cannon.SmlVideoPlayActivity" />
+        <activity android:name=".view.basenode.cannon.SmlSystemListActivity" />
+        <activity android:name=".view.basenode.cannon.MoreCannonControlActivity" />
+        <activity android:name=".view.basenode.cannon.SmartPowerActivity" />
+        <activity android:name=".view.basenode.cannon.SmartPowerListActivity" />
+        <activity android:name=".view.basenode.cannon.WaterCannonActivity" />
+        <activity
+            android:name=".view.basenode.cannon.WaterCannonListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".view.enterprise.RegDeviceCodeActivity" />
         <activity
             android:name=".view.NFCReadActivity"
             android:launchMode="singleTop">
@@ -86,22 +101,24 @@
         <activity
             android:name=".view.SplashActivity"
             android:theme="@style/SplashTheme">
-            <meta-data
-                android:name="android.notch_support"
-                android:value="true" />
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.notch_support"
+                android:value="true" />
         </activity>
         <activity android:name=".view.LoginActivity" />
         <activity
             android:name=".view.compentent.CompetentMainActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".view.basenode.ProjectInfoActivity" />
+        <activity
+            android:name=".view.basenode.ProjectInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity android:name=".view.SystemInfoActivity" />
         <activity android:name=".view.compentent.CompententAreaActivity" />
         <activity android:name=".view.compentent.CompententSearchProjectActivity" />

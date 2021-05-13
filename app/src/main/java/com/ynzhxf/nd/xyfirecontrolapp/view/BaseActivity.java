@@ -67,6 +67,12 @@ public class BaseActivity extends AppCompatActivity implements IBaseView {
 
     protected List<Disposable> addDisposable = new ArrayList<>();
 
+    boolean isPORTRAIT = true;
+
+    public void setPORTRAIT(boolean PORTRAIT) {
+        isPORTRAIT = PORTRAIT;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -233,7 +239,7 @@ public class BaseActivity extends AppCompatActivity implements IBaseView {
         /**
          * 强制竖屏
          */
-        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O && isPORTRAIT) {
             //如果是8.0版本不强制设置屏幕方向
             if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
